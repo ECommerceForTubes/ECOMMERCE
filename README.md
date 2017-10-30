@@ -5,6 +5,7 @@ Installasi di laptop
 Buat Folder Tubesnya
 
 terus git init di foldernya
+
 clone Repository nya git clone https://github.com/ECommerceForTubes/ECOMMERCE.git
 
 Kalo udah clone
