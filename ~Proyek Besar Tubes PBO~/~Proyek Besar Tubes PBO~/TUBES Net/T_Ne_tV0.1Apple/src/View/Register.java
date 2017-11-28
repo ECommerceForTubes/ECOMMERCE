@@ -51,6 +51,10 @@ public class Register extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jCheckBox1 = new javax.swing.JCheckBox();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jScrollBar1 = new javax.swing.JScrollBar();
         jPanelLeft = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -249,7 +253,34 @@ public class Register extends javax.swing.JFrame {
         });
         jPanelRight.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 560, -1, -1));
 
-        getContentPane().add(jPanelRight, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 510, 620));
+        jPanel6.setBackground(new java.awt.Color(173, 215, 246));
+
+        jLabel9.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Sign Up");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel9)
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelRight.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, -1, 40));
+        jPanelRight.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, -1, -1));
+        jPanelRight.add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, -1, 660));
+
+        getContentPane().add(jPanelRight, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 510, 670));
 
         jPanelLeft.setBackground(new java.awt.Color(173, 215, 246));
         jPanelLeft.setToolTipText("");
@@ -258,7 +289,7 @@ public class Register extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/login.png"))); // NOI18N
         jPanelLeft.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 160, 200));
 
-        getContentPane().add(jPanelLeft, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 620));
+        getContentPane().add(jPanelLeft, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -338,16 +369,20 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanelLeft;
     private javax.swing.JPanel jPanelRight;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
