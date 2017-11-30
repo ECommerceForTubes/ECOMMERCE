@@ -17,15 +17,13 @@ public class LoginCustomer {
  
     private ArrayList<Customer> daftarCustomer = new ArrayList();
     private Database db = new Database();
-/*
     public LoginCustomer() {
         db.connect();
-        daftarCustomer = db.loadAdmin();
+        daftarCustomer = db.loadCust();
     }
     
-    public ArrayList<Admin> getDaftarAdmin(){
-        return daftarPegawai;
+    public ArrayList<Customer> getDaftarCust(){
+        return daftarCustomer;
     }
- */   
     
 }

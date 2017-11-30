@@ -13,11 +13,11 @@ import java.util.List;
  * @author Dimas
  */
 public class Customer extends Account{
-    private String id_customer;
+    private int id_customer;
     private List<Transaction> transactions= new ArrayList<>();
     private List<Donation> donations= new ArrayList<>();
 
-    public Customer(String id_customer, String name, String password, String address, String id_card, String e_mail) {
+    public Customer(int id_customer, String name, String password, String address, String id_card, String e_mail) {
         super(name, password, address, id_card, e_mail);
         this.id_customer = id_customer;
     }
