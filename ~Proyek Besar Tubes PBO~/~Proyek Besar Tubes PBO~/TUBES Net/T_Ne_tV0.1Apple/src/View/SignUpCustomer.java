@@ -9,12 +9,12 @@ package View;
  *
  * @author User
  */
-public class Register extends javax.swing.JFrame {
+public class SignUpCustomer extends javax.swing.JFrame {
 
     /**
      * Creates new form Register
      */
-    public Register() {
+    public SignUpCustomer() {
         initComponents();
     }
 
@@ -73,8 +73,8 @@ public class Register extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Sign Up");
-        jPanelRight.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, -1, -1));
+        jLabel2.setText("Sign Up Customer");
+        jPanelRight.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
 
         RegName.setBackground(new java.awt.Color(135, 191, 255));
         RegName.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
