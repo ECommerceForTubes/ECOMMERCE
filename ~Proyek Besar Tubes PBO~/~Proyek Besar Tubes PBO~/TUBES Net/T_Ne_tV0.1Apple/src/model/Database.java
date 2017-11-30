@@ -35,6 +35,20 @@ public class Database {
             throw new IllegalArgumentException("terjadi kesalahan saat koneksi");
         }
     }
+
+    public ArrayList<Customer> loadCust(){
+        try {
+            ArrayList<Customer> daftarCust = new ArrayList();
+            String query = "select * from Customer";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()){
+                Customer a = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+                daftarCust.add(a);
+            }
+        }catch (Exception e){
+            throw new IllegalArgumentException("Terjadi kesalahan saat login");
+        }
+    }
     
     public ResultSet getData(String str) { 
         try{
