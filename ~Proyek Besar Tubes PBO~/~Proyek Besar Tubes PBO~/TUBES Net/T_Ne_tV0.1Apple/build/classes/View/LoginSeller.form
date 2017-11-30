@@ -278,7 +278,7 @@
             </Constraint>
           </Constraints>
         </Component>
-<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/build/classes/View/Login.form
+<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/Login.form
         <Component class="javax.swing.JTextField" name="in_username1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -291,12 +291,12 @@
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f6" green="d7" red="ad" type="rgb"/>
->>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/build/classes/View/LoginSeller.form
+>>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/LoginSeller.form
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/build/classes/View/Login.form
+<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/Login.form
               <AbsoluteConstraints x="50" y="280" width="250" height="20"/>
             </Constraint>
           </Constraints>
@@ -343,7 +343,7 @@
             </Component>
           </SubComponents>
         </Container>
->>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/build/classes/View/LoginSeller.form
+>>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/LoginSeller.form
       </SubComponents>
     </Container>
   </SubComponents>
