@@ -31,10 +31,10 @@ public class Beranda extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         Lcus = new javax.swing.JLabel();
-        LiconSel = new javax.swing.JLabel();
         welcome = new javax.swing.JLabel();
         Lsell = new javax.swing.JLabel();
         LiconCus = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -47,11 +47,6 @@ public class Beranda extends javax.swing.JFrame {
         Lcus.setText("Customers");
         Lcus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(Lcus, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
-
-        LiconSel.setIcon(new javax.swing.ImageIcon("D:\\017-jacket.png")); // NOI18N
-        LiconSel.setText("jLabel2");
-        LiconSel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(LiconSel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 191, -1));
 
         welcome.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
         welcome.setForeground(new java.awt.Color(255, 255, 255));
@@ -73,6 +68,10 @@ public class Beranda extends javax.swing.JFrame {
             }
         });
         jPanel1.add(LiconCus, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 190, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/017-jacket.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 190, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 800, 520));
 
@@ -127,8 +126,8 @@ public class Beranda extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Lcus;
     private javax.swing.JLabel LiconCus;
-    private javax.swing.JLabel LiconSel;
     private javax.swing.JLabel Lsell;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel welcome;
     // End of variables declaration//GEN-END:variables
