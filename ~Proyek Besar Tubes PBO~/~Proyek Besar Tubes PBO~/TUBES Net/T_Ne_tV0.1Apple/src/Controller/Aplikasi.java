@@ -20,6 +20,7 @@ public class Aplikasi {
     ArrayList<Customer> tabCus = new ArrayList();
     ArrayList<Seller> tabSell = new ArrayList<>();
     
+    
 
     
 }

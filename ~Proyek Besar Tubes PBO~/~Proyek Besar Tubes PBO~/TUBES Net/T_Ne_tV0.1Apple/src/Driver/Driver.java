@@ -7,5 +7,7 @@ package Driver;
 
 //THIS IS DRIVER CLASS OR MAIN CLASS
 public class Driver {
-    
+    public static void main(String[] args) {
+        //new ControllerBeranda();
+    }
 }
