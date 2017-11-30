@@ -12,22 +12,22 @@ import java.sql.*;
  * @author X105
  */
 public class Database {
-    private String server = "jdbc:mysql://localhost/ecommerce";//nama database
+    private String server = "jdbc:mysql://localhost/ecommerce";
     private String dbuser = "root";
     private String dbpasswd = "";
     private Statement statement = null;
     private Connection connection = null;
     private ResultSet rs = null;
     
-    public Database() { //constructor untuk mengkoneksikan database
+    public Database() { 
         try{
             Class.forName("com.mysql.jdbc.Driver");
         }catch(Exception e){
             System.out.println("Error: " + e.getMessage());
         }
-        connect();//manggil method connect
+        connect();
     }
-    public void connect() { //method untuk mengkoneksikan database 
+    public void connect() { 
         try {
             connection = DriverManager.getConnection(server, dbuser, dbpasswd);
             statement = connection.createStatement();
@@ -36,7 +36,7 @@ public class Database {
         }
     }
     
-    public ResultSet getData(String str) { //string disini merupakan query
+    public ResultSet getData(String str) { 
         try{
             rs = statement.executeQuery(str);
         }catch(Exception e){
