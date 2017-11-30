@@ -72,31 +72,31 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Ubuntu", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("DolPick.com");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("\"We Give you ECOMMERCE you can trust\"");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
         PasswordLabel.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         PasswordLabel.setForeground(new java.awt.Color(255, 255, 255));
         PasswordLabel.setText("Password");
-        jPanel1.add(PasswordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 70, -1));
+        jPanel1.add(PasswordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 70, -1));
 
         in_username.setBackground(new java.awt.Color(135, 191, 255));
         in_username.setBorder(null);
-        jPanel1.add(in_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 250, 20));
+        jPanel1.add(in_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 250, 20));
 
         UsernameLabel.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         UsernameLabel.setForeground(new java.awt.Color(255, 255, 255));
         UsernameLabel.setText("Username");
-        jPanel1.add(UsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, -1));
+        jPanel1.add(UsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
         LoginLabel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         LoginLabel.setForeground(new java.awt.Color(255, 255, 255));
         LoginLabel.setText("Login");
-        jPanel1.add(LoginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, -1, -1));
+        jPanel1.add(LoginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
 
         jPasswordField1.setBackground(new java.awt.Color(135, 191, 255));
         jPasswordField1.setToolTipText("");
@@ -106,7 +106,7 @@ public class Login extends javax.swing.JFrame {
                 jPasswordField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 250, -1));
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 250, -1));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 240, 240)));
 
@@ -121,7 +121,7 @@ public class Login extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 250, -1));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 250, -1));
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 240, 240)));
 
@@ -136,12 +136,12 @@ public class Login extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 428, 250, -1));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 250, -1));
 
         jLabel4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Sign Up?");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 450, -1, -1));
+        jLabel4.setText("Sign Up");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 380, 510));
 
