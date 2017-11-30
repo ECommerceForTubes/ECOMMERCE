@@ -3,9 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/PTransaksi.java</file>
             <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Database.java</file>
             <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/PDeskProduk.java</file>
+=======
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/login.png</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/Beranda.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Payment.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Transaction.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Services.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Account.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Tickets.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Seller.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/SignUpCustomer.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Discount.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/HPMenuCustomer.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Donation.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Item.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/Aplikasi.java</file>
+            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/LoginSeller.java</file>
+>>>>>>> 7a13e0f05618ec25411f0fd218bfe57c732eeac5
         </group>
     </open-files>
 </project-private>
