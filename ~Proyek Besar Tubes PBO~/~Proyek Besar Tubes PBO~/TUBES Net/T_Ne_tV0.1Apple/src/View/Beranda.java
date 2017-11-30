@@ -46,6 +46,11 @@ public class Beranda extends javax.swing.JFrame {
         Lcus.setForeground(new java.awt.Color(255, 255, 255));
         Lcus.setText("Customers");
         Lcus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lcus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LcusMouseClicked(evt);
+            }
+        });
         jPanel1.add(Lcus, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
 
         welcome.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
@@ -71,6 +76,11 @@ public class Beranda extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/017-jacket.png"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 190, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 800, 520));
@@ -80,13 +90,34 @@ public class Beranda extends javax.swing.JFrame {
 
     private void LiconCusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LiconCusMouseClicked
         // TODO add your handling code here:
-        Login loginCus = new Login();
+        LoginCustomer loginCus = new LoginCustomer();
         loginCus.setVisible(true);
         loginCus.pack();
         loginCus.setLocationRelativeTo(null);
         loginCus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_LiconCusMouseClicked
+
+    private void LcusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LcusMouseClicked
+        // TODO add your handling code here:
+        LoginCustomer loginCus = new LoginCustomer();
+        loginCus.setVisible(true);
+        loginCus.pack();
+        loginCus.setLocationRelativeTo(null);
+        loginCus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_LcusMouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+        LoginCustomer loginCus = new LoginCustomer();
+        loginCus.setVisible(true);
+        loginCus.pack();
+        loginCus.setLocationRelativeTo(null);
+        loginCus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments

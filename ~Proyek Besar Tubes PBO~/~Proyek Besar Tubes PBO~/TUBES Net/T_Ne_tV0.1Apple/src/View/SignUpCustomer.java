@@ -5,6 +5,8 @@
  */
 package View;
 
+import static javax.swing.text.html.HTML.Tag.HEAD;
+
 /**
  *
  * @author User
@@ -321,11 +323,11 @@ public class SignUpCustomer extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/Register.java
+//<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/Register.java
 //    public static void main(String args[]) {
-=======
+//=======
 //    public static void main(String args[]) { 
->>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/SignUpCustomer.java
+//>>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/SignUpCustomer.java
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
 //        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

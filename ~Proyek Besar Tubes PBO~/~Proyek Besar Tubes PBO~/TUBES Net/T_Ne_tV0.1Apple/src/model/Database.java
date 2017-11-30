@@ -34,7 +34,7 @@ public class Database {
             connection = DriverManager.getConnection(server, dbuser, dbpasswd);
             statement = connection.createStatement();
         } catch (Exception e) {
-            throw new IllegalArgumentException("terjadi kesalahan saat koneksi");
+            JOptionPane.showConfirmDialog(null, e.getMessage(), "Terjadi kesalahan saat konek", JOptionPane.WARNING_MESSAGE);
         }
     }
 
