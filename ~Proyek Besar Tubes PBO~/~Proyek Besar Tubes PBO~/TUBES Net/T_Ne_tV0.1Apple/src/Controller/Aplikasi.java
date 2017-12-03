@@ -37,8 +37,8 @@ public class Aplikasi {
     }
 
     public String cekLogin(String username, String password, String Status) {
-        return null;
-        //return db.getStatus(username, password, Status);
+        
+        return db.getlogin(username, password, Status);
     }
 //   	public void deleteSeller()   
 }

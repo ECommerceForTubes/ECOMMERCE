@@ -130,7 +130,8 @@ public class Database {
             }
             return st;
         } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, "eror get status", "Eror get status", JOptionPane.WARNING_MESSAGE);
+           JOptionPane.showConfirmDialog(null, "eror get status", "Eror get status", JOptionPane.WARNING_MESSAGE);
+
         }
         return st;
     }
@@ -183,15 +184,11 @@ public class Database {
         return rs;
     }
     
-    public void query(String str) { //string disini merupakan query
+    public void query(String str) { 
         try{
             statement.executeUpdate(str);
         }catch(Exception e){
             System.out.println("Error: " + e.getMessage());
         }
-    }
-
-    public String getStatus(String username, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

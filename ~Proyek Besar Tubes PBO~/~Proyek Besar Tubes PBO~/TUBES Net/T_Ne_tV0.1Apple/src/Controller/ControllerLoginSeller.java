@@ -5,20 +5,23 @@
  */
 package Controller;
 
-
+import View.HPMenuSeller;
 import View.LoginSeller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Dimas
  */
 public class ControllerLoginSeller implements ActionListener {
     LoginSeller loginSeller;
+    HPMenuSeller hp;
+    Aplikasi model;
     
     public ControllerLoginSeller() {
         loginSeller = new LoginSeller();
+        model = new Aplikasi();
         loginSeller.setVisible(true);
         loginSeller.setLocationRelativeTo(null);
         loginSeller.addlistener(this);
@@ -31,6 +34,21 @@ public class ControllerLoginSeller implements ActionListener {
             String user = loginSeller.getIn_username().getText();
             String pass = loginSeller.getjPasswordField1().getText();
             System.out.println(user + pass);
+
+            try{
+                if (model.cekLogin(user, pass, "seller")!=null){
+                    hp = new HPMenuSeller();
+                    hp.setVisible(true);
+                    hp.setLocationRelativeTo(null);
+                }else if(model.cekLogin(user, pass, "admin")!=null){
+                    System.out.println("SUKSES ADMIN BROO");
+                }else{
+                    JOptionPane.showConfirmDialog(loginSeller, "Anda belum terdaftar", "Login Gagal", JOptionPane.WARNING_MESSAGE);
+                }
+            }catch (Exception ee) {
+                 ee.printStackTrace();//penting
+               JOptionPane.showConfirmDialog(loginSeller, ""+ee.getMessage(), ""+ee.getMessage(), JOptionPane.WARNING_MESSAGE);
+            }
         }
     }
     

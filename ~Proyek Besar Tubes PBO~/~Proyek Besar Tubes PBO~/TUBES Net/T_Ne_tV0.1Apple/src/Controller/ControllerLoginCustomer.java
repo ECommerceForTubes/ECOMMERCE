@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import View.HPMenuCustomers;
 import View.LoginCustomer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class ControllerLoginCustomer implements ActionListener{
     LoginCustomer loginCustomer;
+    HPMenuCustomers hpMenuCustomers;
     Aplikasi model;
 
     public ControllerLoginCustomer() {
@@ -32,12 +34,19 @@ public class ControllerLoginCustomer implements ActionListener{
         if (a == loginCustomer.getjButtonLogin()) {
             String user = loginCustomer.getIn_username().getText();
             String pass = loginCustomer.getjPasswordField1().getText();
-            System.out.println(user + pass);
+            //System.out.println(user + pass);
             
             try {
-                if (!(model.cekLogin(user, pass,"Customer")==null)) {
+                if (model.cekLogin(user, pass,"customer")!=null) {
+                    hpMenuCustomers = new HPMenuCustomers();
+                    hpMenuCustomers.setVisible(true);
+                    hpMenuCustomers.setLocationRelativeTo(null);
                     
-                } else {
+                    //hpMenuCustomers.addlistener(this);
+                    
+                }else if (model.cekLogin(user, pass,"admin")!=null){
+                    System.out.println("SUKSES ADMIN BRO");//<<<<<DIGANTI HOMEPAGE
+                }else {
                     JOptionPane.showConfirmDialog(loginCustomer, "Anda belum terdaftar", "Login Gagal", JOptionPane.WARNING_MESSAGE);
                 }
 
