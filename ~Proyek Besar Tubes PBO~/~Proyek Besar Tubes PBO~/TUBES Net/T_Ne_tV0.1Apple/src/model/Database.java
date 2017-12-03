@@ -123,7 +123,7 @@ public class Database {
     public String getlogin(String email, String password, String status) {
         String st = null;
         try {
-            String query = "select * from customer where email= '" + email + "' and pass='" + password + "'";
+            String query = "select * from "+status+" where email= '" + email + "' and password='" + password + "'";
             ResultSet rs = statement.executeQuery(query);
             if (rs.next()) {
                 st = rs.getString(1);
@@ -184,15 +184,11 @@ public class Database {
         return rs;
     }
     
-    public void query(String str) { //string disini merupakan query
+    public void query(String str) { 
         try{
             statement.executeUpdate(str);
         }catch(Exception e){
             System.out.println("Error: " + e.getMessage());
         }
-    }
-
-    public String getStatus(String username, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

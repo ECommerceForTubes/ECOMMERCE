@@ -45,7 +45,9 @@ public class ControllerLoginCustomer implements ActionListener{
                     
                     //hpMenuCustomers.addlistener(this);  ********* ini semsntara
                     
-                } else {
+                }else if (model.cekLogin(user, pass,"admin")!=null){
+                    System.out.println("SUKSES ADMIN BRO");//<<<<<DIGANTI HOMEPAGE
+                }else {
                     JOptionPane.showConfirmDialog(loginCustomer, "Anda belum terdaftar", "Login Gagal", JOptionPane.WARNING_MESSAGE);
                 }
 

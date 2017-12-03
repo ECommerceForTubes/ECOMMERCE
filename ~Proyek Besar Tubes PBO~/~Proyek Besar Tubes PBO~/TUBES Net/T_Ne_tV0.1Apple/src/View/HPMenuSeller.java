@@ -33,7 +33,7 @@ public class HPMenuSeller extends javax.swing.JFrame {
         jPanelItem = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelViewProduct = new javax.swing.JLabel();
         email = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -99,10 +99,10 @@ public class HPMenuSeller extends javax.swing.JFrame {
         jLabel6.setText("Seller Option");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("View Our Product");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, -1, -1));
+        jLabelViewProduct.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabelViewProduct.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelViewProduct.setText("View Our Product");
+        jPanel1.add(jLabelViewProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, -1, -1));
 
         email.setBackground(new java.awt.Color(135, 191, 255));
         email.setToolTipText("");
@@ -161,14 +161,15 @@ public class HPMenuSeller extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel email;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabelViewProduct;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelItem;
     private javax.swing.JPanel jPanelService;
     // End of variables declaration//GEN-END:variables
+
 }
