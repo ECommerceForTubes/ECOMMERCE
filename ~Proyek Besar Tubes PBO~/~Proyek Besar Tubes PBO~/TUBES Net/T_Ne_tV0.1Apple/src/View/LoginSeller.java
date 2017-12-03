@@ -5,6 +5,10 @@
  */
 package View;
 
+import Controller.ControllerSignUpSeller;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+
 /**
  *
  * @author User
@@ -31,22 +35,17 @@ public class LoginSeller extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jButtonLogins = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         PasswordLabel = new javax.swing.JLabel();
-        in_username = new javax.swing.JTextField();
-        UsernameLabel = new javax.swing.JLabel();
-        LoginLabel = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
+        UsernameLabel = new javax.swing.JLabel();
+        in_username = new javax.swing.JTextField();
+        LoginLabel = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/Login.java
-        in_username1 = new javax.swing.JTextField();
-=======
-        jPanel6 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
->>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/LoginSeller.java
+        jLabelSingUp = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -61,12 +60,11 @@ public class LoginSeller extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 512));
-        setPreferredSize(new java.awt.Dimension(800, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/ipad-tablet-technology-touch.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/personal.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 510));
 
@@ -74,6 +72,17 @@ public class LoginSeller extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(135, 191, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButtonLogins.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonLogins.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonLogins.setForeground(new java.awt.Color(51, 153, 255));
+        jButtonLogins.setText("LOGIN");
+        jButtonLogins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLoginsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonLogins, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, 100, 40));
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,21 +99,9 @@ public class LoginSeller extends javax.swing.JFrame {
         PasswordLabel.setText("Password");
         jPanel1.add(PasswordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 70, -1));
 
-        in_username.setBackground(new java.awt.Color(135, 191, 255));
-        in_username.setBorder(null);
-        jPanel1.add(in_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 250, 20));
-
-        UsernameLabel.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        UsernameLabel.setForeground(new java.awt.Color(255, 255, 255));
-        UsernameLabel.setText("Username");
-        jPanel1.add(UsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
-
-        LoginLabel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        LoginLabel.setForeground(new java.awt.Color(255, 255, 255));
-        LoginLabel.setText("Login Seller");
-        jPanel1.add(LoginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, -1, -1));
-
         jPasswordField1.setBackground(new java.awt.Color(135, 191, 255));
+        jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPasswordField1.setForeground(new java.awt.Color(255, 255, 255));
         jPasswordField1.setToolTipText("");
         jPasswordField1.setBorder(null);
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +109,23 @@ public class LoginSeller extends javax.swing.JFrame {
                 jPasswordField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 250, -1));
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 250, 20));
+
+        UsernameLabel.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        UsernameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        UsernameLabel.setText("Username");
+        jPanel1.add(UsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
+
+        in_username.setBackground(new java.awt.Color(135, 191, 255));
+        in_username.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        in_username.setForeground(new java.awt.Color(255, 255, 255));
+        in_username.setBorder(null);
+        jPanel1.add(in_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 250, 20));
+
+        LoginLabel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        LoginLabel.setForeground(new java.awt.Color(255, 255, 255));
+        LoginLabel.setText("Login Seller");
+        jPanel1.add(LoginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, -1, -1));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 240, 240)));
 
@@ -144,46 +157,16 @@ public class LoginSeller extends javax.swing.JFrame {
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 250, -1));
 
-        jLabel4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Sign Up");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, -1, -1));
-
-<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/Login.java
-        in_username1.setBackground(new java.awt.Color(135, 191, 255));
-        in_username1.setBorder(null);
-        jPanel1.add(in_username1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 250, 20));
-=======
-        jPanel6.setBackground(new java.awt.Color(173, 215, 246));
-
-        jLabel5.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Login");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabelSingUp.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabelSingUp.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelSingUp.setText("Sign Up");
+        jLabelSingUp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelSingUp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
+                jLabelSingUpMouseClicked(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel5)
-                .addContainerGap(35, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, 110, 40));
->>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/LoginSeller.java
+        jPanel1.add(jLabelSingUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 380, 510));
 
@@ -194,9 +177,15 @@ public class LoginSeller extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+    private void jLabelSingUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSingUpMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel5MouseClicked
+        new ControllerSignUpSeller();
+        this.dispose();                     
+    }//GEN-LAST:event_jLabelSingUpMouseClicked
+
+    private void jButtonLoginsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonLoginsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -239,18 +228,34 @@ public class LoginSeller extends javax.swing.JFrame {
     private javax.swing.JLabel PasswordLabel;
     private javax.swing.JLabel UsernameLabel;
     private javax.swing.JTextField in_username;
-    private javax.swing.JTextField in_username1;
+    private javax.swing.JButton jButtonLogins;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabelSingUp;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPasswordField jPasswordField1;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JTextField getIn_username() {
+        return in_username;
+    }
+
+    public javax.swing.JPasswordField getjPasswordField1() {
+        return jPasswordField1;
+    }
+    
+    public void addlistener(ActionListener a){
+        jButtonLogins.addActionListener(a);
+    }
+
+    public javax.swing.JButton getjButtonLogins() {
+        return jButtonLogins;
+    }
+    
+
 }

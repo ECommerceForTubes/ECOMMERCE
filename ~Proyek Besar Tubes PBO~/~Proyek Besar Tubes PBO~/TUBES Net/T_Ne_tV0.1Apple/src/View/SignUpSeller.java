@@ -5,6 +5,8 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author User
@@ -42,20 +44,14 @@ public class SignUpSeller extends javax.swing.JFrame {
         RegAddress = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
+        jLabelemail = new javax.swing.JLabel();
         RegEmail = new javax.swing.JTextField();
+        jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
         jCheckBox1 = new javax.swing.JCheckBox();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jScrollBar1 = new javax.swing.JScrollBar();
-        jPanelLeft = new javax.swing.JPanel();
+        RegIdentnumber = new javax.swing.JTextField();
+        SignUp = new javax.swing.JButton();
+        email = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -102,10 +98,10 @@ public class SignUpSeller extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 8, Short.MAX_VALUE)
+            .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        jPanelRight.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 300, -1));
+        jPanelRight.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 300, 5));
 
         PasswordInter.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         PasswordInter.setForeground(new java.awt.Color(255, 255, 255));
@@ -120,10 +116,10 @@ public class SignUpSeller extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 8, Short.MAX_VALUE)
+            .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        jPanelRight.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 300, -1));
+        jPanelRight.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 300, 5));
 
         RegPassword.setBackground(new java.awt.Color(135, 191, 255));
         RegPassword.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
@@ -155,31 +151,31 @@ public class SignUpSeller extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
+            .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        jPanelRight.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 300, 10));
+        jPanelRight.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 300, 5));
 
         jLabel6.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Identity Number");
         jPanelRight.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Email");
-        jPanelRight.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
+        jLabelemail.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLabelemail.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelemail.setText(" Email :");
+        jPanelRight.add(jLabelemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
 
-        jTextField1.setBackground(new java.awt.Color(135, 191, 255));
-        jTextField1.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        RegEmail.setBackground(new java.awt.Color(135, 191, 255));
+        RegEmail.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        RegEmail.setForeground(new java.awt.Color(255, 255, 255));
+        RegEmail.setBorder(null);
+        RegEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                RegEmailActionPerformed(evt);
             }
         });
-        jPanelRight.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 300, -1));
+        jPanelRight.add(RegEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 300, -1));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -189,17 +185,10 @@ public class SignUpSeller extends javax.swing.JFrame {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
+            .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        jPanelRight.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 300, 10));
-
-        RegEmail.setEditable(false);
-        RegEmail.setBackground(new java.awt.Color(135, 191, 255));
-        RegEmail.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
-        RegEmail.setForeground(new java.awt.Color(255, 255, 255));
-        RegEmail.setBorder(null);
-        jPanelRight.add(RegEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 300, -1));
+        jPanelRight.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 300, 5));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -209,37 +198,10 @@ public class SignUpSeller extends javax.swing.JFrame {
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
+            .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        jPanelRight.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 300, 10));
-
-        jLabel8.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Gender");
-        jPanelRight.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, -1, -1));
-
-        jRadioButton1.setBackground(new java.awt.Color(135, 191, 255));
-        jRadioButton1.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Female");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-        jPanelRight.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, -1, -1));
-
-        jRadioButton2.setBackground(new java.awt.Color(135, 191, 255));
-        jRadioButton2.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Male");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
-        jPanelRight.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, -1, -1));
+        jPanelRight.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 300, 5));
 
         jCheckBox1.setBackground(new java.awt.Color(135, 191, 255));
         jCheckBox1.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
@@ -250,45 +212,40 @@ public class SignUpSeller extends javax.swing.JFrame {
                 jCheckBox1ActionPerformed(evt);
             }
         });
-        jPanelRight.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 560, -1, -1));
+        jPanelRight.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 500, -1, -1));
 
-        jPanel6.setBackground(new java.awt.Color(173, 215, 246));
+        RegIdentnumber.setBackground(new java.awt.Color(135, 191, 255));
+        RegIdentnumber.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        RegIdentnumber.setForeground(new java.awt.Color(255, 255, 255));
+        RegIdentnumber.setBorder(null);
+        RegIdentnumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegIdentnumberActionPerformed(evt);
+            }
+        });
+        jPanelRight.add(RegIdentnumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 300, -1));
 
-        jLabel9.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Sign Up");
+        SignUp.setBackground(new java.awt.Color(173, 215, 246));
+        SignUp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        SignUp.setForeground(new java.awt.Color(255, 255, 255));
+        SignUp.setText("Sign Up");
+        SignUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SignUpActionPerformed(evt);
+            }
+        });
+        jPanelRight.add(SignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 560, 100, 40));
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel9)
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanelRight, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 510, 730));
 
-        jPanelRight.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, -1, 40));
-        jPanelRight.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, -1, -1));
-        jPanelRight.add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, -1, 660));
+        email.setBackground(new java.awt.Color(173, 215, 246));
+        email.setToolTipText("");
+        email.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        getContentPane().add(jPanelRight, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 510, 670));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/man.png"))); // NOI18N
+        email.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 110, 200));
 
-        jPanelLeft.setBackground(new java.awt.Color(173, 215, 246));
-        jPanelLeft.setToolTipText("");
-        jPanelLeft.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/login.png"))); // NOI18N
-        jPanelLeft.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 160, 200));
-
-        getContentPane().add(jPanelLeft, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 670));
+        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 730));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -301,21 +258,21 @@ public class SignUpSeller extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_RegAddressActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void RegEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_RegEmailActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void RegIdentnumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegIdentnumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RegIdentnumberActionPerformed
+
+    private void SignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SignUpActionPerformed
 
     /**
      * @param args the command line arguments
@@ -357,8 +314,11 @@ public class SignUpSeller extends javax.swing.JFrame {
     private javax.swing.JLabel PasswordInter;
     private javax.swing.JTextField RegAddress;
     private javax.swing.JTextField RegEmail;
+    private javax.swing.JTextField RegIdentnumber;
     private javax.swing.JTextField RegName;
     private javax.swing.JPasswordField RegPassword;
+    private javax.swing.JButton SignUp;
+    private javax.swing.JPanel email;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -366,23 +326,63 @@ public class SignUpSeller extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelemail;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanelLeft;
     private javax.swing.JPanel jPanelRight;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSlider jSlider1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the RegAddress
+     */
+    public javax.swing.JTextField getRegAddress() {
+        return RegAddress;
+    }
+
+    /**
+     * @return the RegEmail
+     */
+    public javax.swing.JTextField getRegEmail() {
+        return RegEmail;
+    }
+
+    /**
+     * @return the RegIdentnumber
+     */
+    public javax.swing.JTextField getRegIdentnumber() {
+        return RegIdentnumber;
+    }
+
+    /**
+     * @return the RegName
+     */
+    public javax.swing.JTextField getRegName() {
+        return RegName;
+    }
+
+    /**
+     * @return the RegPassword
+     */
+    public javax.swing.JPasswordField getRegPassword() {
+        return RegPassword;
+    }
+
+    /**
+     * @return the SignUp
+     */
+    public javax.swing.JButton getSignUp() {
+        return SignUp;
+    }
+    
+    public void addlistener(ActionListener a){
+        SignUp.addActionListener(a);
+    }
+    
+
+
 }
