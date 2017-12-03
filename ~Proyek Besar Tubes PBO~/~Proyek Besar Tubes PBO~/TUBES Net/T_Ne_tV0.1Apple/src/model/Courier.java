@@ -14,7 +14,7 @@ public class Courier {
         
     private String name;
     private String id_courier;
-    private int tarif;
+    private double tarif;
 
     public Courier(String name, String id_courier, int tarif) {
         this.name = name;
@@ -42,7 +42,7 @@ public class Courier {
         this.tarif = tarif;
     }
 
-    public int getTarif() {
+    public double getTarif() {
         return tarif;
     }
  

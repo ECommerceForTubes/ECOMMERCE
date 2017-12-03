@@ -601,16 +601,16 @@ public class HPMenuCustomer extends javax.swing.JFrame {
 //        }
 //        //</editor-fold>
 //        //</editor-fold>
->>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/HPMenuCustomer.java
+//>>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/HPMenuCustomer.java
 //
 //        /* Create and display the form */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
-<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/HomePageCustomer.java
+//<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/HomePageCustomer.java
 //                new HomePageCustomer().setVisible(true);
-=======
+//=======
 //                new HPMenuCustomer().setVisible(true);
->>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/HPMenuCustomer.java
+//>>>>>>> ca00af0c9ae460c2d8c0f589331bbc8004a10c69:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/HPMenuCustomer.java
 //            }
 //        });
 //    }

@@ -80,7 +80,7 @@ public class Beranda extends javax.swing.JFrame {
 
     private void LiconCusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LiconCusMouseClicked
         // TODO add your handling code here:
-        Login loginCus = new Login();
+        LoginCustomer loginCus = new LoginCustomer();
         loginCus.setVisible(true);
         loginCus.pack();
         loginCus.setLocationRelativeTo(null);

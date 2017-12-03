@@ -321,7 +321,7 @@ public class SignUpCustomer extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/Register.java
+/*<<<<<<< HEAD:~Proyek Besar Tubes PBO~/~Proyek Besar Tubes PBO~/TUBES Net/T_Ne_tV0.1Apple/src/View/Register.java
 //    public static void main(String args[]) {
 =======
 //    public static void main(String args[]) { 

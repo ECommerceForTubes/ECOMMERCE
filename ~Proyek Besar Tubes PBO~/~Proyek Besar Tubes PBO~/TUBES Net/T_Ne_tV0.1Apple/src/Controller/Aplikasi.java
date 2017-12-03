@@ -13,7 +13,7 @@ import model.Database;
 import model.Seller;
 /**
  *
- * @author Dimas
+ * @author Dimass
  */
 public class Aplikasi {
     Database DB;
