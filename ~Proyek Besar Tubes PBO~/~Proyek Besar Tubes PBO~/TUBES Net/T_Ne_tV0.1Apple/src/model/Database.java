@@ -123,7 +123,7 @@ public class Database {
     public String getlogin(String email, String password, String status) {
         String st = null;
         try {
-            String query = "select * from "+status+" where username= '" + email + "' and password='" + password + "'";
+            String query = "select * from "+status+" where email= '" + email + "' and password='" + password + "'";
             ResultSet rs = statement.executeQuery(query);
             if (rs.next()) {
                 st = rs.getString(1);
