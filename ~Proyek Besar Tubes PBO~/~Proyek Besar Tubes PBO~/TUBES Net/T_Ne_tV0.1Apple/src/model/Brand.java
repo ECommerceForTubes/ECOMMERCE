@@ -12,13 +12,13 @@ import java.util.List;
  *
  * @author Dimas
  */
-public class Brand extends Seller{
+public class Brand extends Account{
 //>>-----------------------------
     private String id_brand;
     private List<Tickets> tickets= new ArrayList<>();
 
-    public Brand(String name, String password, String address, String id_card, String e_mail, String id_seller) {
-        super(name, password, address, id_card, e_mail, id_seller);
+    public Brand(String name, String password, String address, String e_mail) {
+        super(name, password, address, e_mail);
     }
 
     public void setId_brand(String id_brand) {
