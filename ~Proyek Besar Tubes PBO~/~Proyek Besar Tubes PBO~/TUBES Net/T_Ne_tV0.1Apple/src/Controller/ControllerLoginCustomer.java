@@ -32,10 +32,10 @@ public class ControllerLoginCustomer implements ActionListener{
         if (a == loginCustomer.getjButtonLogin()) {
             String user = loginCustomer.getIn_username().getText();
             String pass = loginCustomer.getjPasswordField1().getText();
-            System.out.println(user + pass);
+            //System.out.println(user + pass);
             
             try {
-                if (!(model.cekLogin(user, pass,"Customer")==null)) {
+                if (model.cekLogin(user, pass,"customer")!=null) {
                     
                 } else {
                     JOptionPane.showConfirmDialog(loginCustomer, "Anda belum terdaftar", "Login Gagal", JOptionPane.WARNING_MESSAGE);

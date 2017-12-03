@@ -123,14 +123,15 @@ public class Database {
     public String getlogin(String email, String password, String status) {
         String st = null;
         try {
-            String query = "select * from "+status+" where username= '" + email + "' and password='" + password + "'";
+            String query = "select * from customer where email= '" + email + "' and pass='" + password + "'";
             ResultSet rs = statement.executeQuery(query);
             if (rs.next()) {
                 st = rs.getString(1);
             }
             return st;
         } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, "eror get status", "Eror get status", JOptionPane.WARNING_MESSAGE);
+           JOptionPane.showConfirmDialog(null, "eror get status", "Eror get status", JOptionPane.WARNING_MESSAGE);
+
         }
         return st;
     }
