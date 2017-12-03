@@ -5,6 +5,7 @@
  */
 package View;
 
+import Controller.ControllerLoginCustomer;
 import javax.swing.JFrame;
 
 /**
@@ -34,7 +35,8 @@ public class Beranda extends javax.swing.JFrame {
         welcome = new javax.swing.JLabel();
         Lsell = new javax.swing.JLabel();
         LiconCus = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        LiconSel = new javax.swing.JLabel();
+        bacground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,6 +64,11 @@ public class Beranda extends javax.swing.JFrame {
         Lsell.setForeground(new java.awt.Color(255, 255, 255));
         Lsell.setText("Seller");
         Lsell.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lsell.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LsellMouseClicked(evt);
+            }
+        });
         jPanel1.add(Lsell, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 410, -1, -1));
 
         LiconCus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/009-money-1.png"))); // NOI18N
@@ -74,91 +81,99 @@ public class Beranda extends javax.swing.JFrame {
         });
         jPanel1.add(LiconCus, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 190, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/017-jacket.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        LiconSel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/017-jacket.png"))); // NOI18N
+        LiconSel.setText("jLabel1");
+        LiconSel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LiconSel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                LiconSelMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 190, -1));
+        jPanel1.add(LiconSel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 190, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 800, 520));
+        bacground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/coba2.png"))); // NOI18N
+        bacground.setText("jLabel2");
+        jPanel1.add(bacground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 800, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void LiconCusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LiconCusMouseClicked
         // TODO add your handling code here:
-        LoginCustomer loginCus = new LoginCustomer();
-        loginCus.setVisible(true);
-        loginCus.pack();
-        loginCus.setLocationRelativeTo(null);
-        loginCus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        new ControllerLoginCustomer();
         this.dispose();
     }//GEN-LAST:event_LiconCusMouseClicked
 
     private void LcusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LcusMouseClicked
         // TODO add your handling code here:
-        LoginCustomer loginCus = new LoginCustomer();
-        loginCus.setVisible(true);
-        loginCus.pack();
-        loginCus.setLocationRelativeTo(null);
-        loginCus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        new ControllerLoginCustomer();
         this.dispose();
     }//GEN-LAST:event_LcusMouseClicked
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void LiconSelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LiconSelMouseClicked
         // TODO add your handling code here:
         // TODO add your handling code here:
-        LoginCustomer loginCus = new LoginCustomer();
-        loginCus.setVisible(true);
-        loginCus.pack();
-        loginCus.setLocationRelativeTo(null);
-        loginCus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        brandOrPersonal barnd_personal = new brandOrPersonal();
+        barnd_personal.setVisible(true);
+        barnd_personal.pack();
+        barnd_personal.setLocationRelativeTo(null);
+        barnd_personal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.dispose();
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_LiconSelMouseClicked
+
+    private void LsellMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LsellMouseClicked
+        // TODO add your handling code here:
+        brandOrPersonal barnd_personal = new brandOrPersonal();
+        barnd_personal.setVisible(true);
+        barnd_personal.pack();
+        barnd_personal.setLocationRelativeTo(null);
+        barnd_personal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_LsellMouseClicked
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Beranda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Beranda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Beranda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Beranda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Beranda().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Beranda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Beranda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Beranda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Beranda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new Beranda().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Lcus;
     private javax.swing.JLabel LiconCus;
+    private javax.swing.JLabel LiconSel;
     private javax.swing.JLabel Lsell;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel bacground;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel welcome;
     // End of variables declaration//GEN-END:variables

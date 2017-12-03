@@ -5,6 +5,7 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
 import static javax.swing.text.html.HTML.Tag.HEAD;
 
 /**
@@ -32,51 +33,51 @@ public class SignUpCustomer extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jSlider1 = new javax.swing.JSlider();
         jPanelRight = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        dolpick = new javax.swing.JLabel();
+        signup = new javax.swing.JLabel();
+        name = new javax.swing.JLabel();
         RegName = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        PasswordInter = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        Password = new javax.swing.JLabel();
         RegPassword = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
         RegAddress = new javax.swing.JTextField();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
-        RegEmail = new javax.swing.JTextField();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        idnum = new javax.swing.JLabel();
+        RegIdnum = new javax.swing.JTextField();
+        email = new javax.swing.JLabel();
+        Regemail = new javax.swing.JTextField();
         jCheckBox1 = new javax.swing.JCheckBox();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jScrollBar1 = new javax.swing.JScrollBar();
+        SignUp = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
         jPanelLeft = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 510));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelRight.setBackground(new java.awt.Color(135, 191, 255));
         jPanelRight.setPreferredSize(new java.awt.Dimension(800, 510));
         jPanelRight.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("DolPick.com");
-        jPanelRight.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
+        dolpick.setFont(new java.awt.Font("Ubuntu", 0, 36)); // NOI18N
+        dolpick.setForeground(new java.awt.Color(255, 255, 255));
+        dolpick.setText("DolPick.com");
+        jPanelRight.add(dolpick, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Sign Up Customer");
-        jPanelRight.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
+        signup.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        signup.setForeground(new java.awt.Color(255, 255, 255));
+        signup.setText("Sign Up Customer");
+        jPanelRight.add(signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
+
+        name.setBackground(new java.awt.Color(255, 255, 255));
+        name.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        name.setForeground(new java.awt.Color(255, 255, 255));
+        name.setText("Name :");
+        name.setToolTipText("");
+        jPanelRight.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
 
         RegName.setBackground(new java.awt.Color(135, 191, 255));
         RegName.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
@@ -90,43 +91,10 @@ public class SignUpCustomer extends javax.swing.JFrame {
         });
         jPanelRight.add(RegName, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 162, 300, -1));
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Name :");
-        jLabel3.setToolTipText("");
-        jPanelRight.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 8, Short.MAX_VALUE)
-        );
-
-        jPanelRight.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 300, -1));
-
-        PasswordInter.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        PasswordInter.setForeground(new java.awt.Color(255, 255, 255));
-        PasswordInter.setText("Password :");
-        jPanelRight.add(PasswordInter, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 8, Short.MAX_VALUE)
-        );
-
-        jPanelRight.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 300, -1));
+        Password.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        Password.setForeground(new java.awt.Color(255, 255, 255));
+        Password.setText("Password :");
+        jPanelRight.add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
 
         RegPassword.setBackground(new java.awt.Color(135, 191, 255));
         RegPassword.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
@@ -150,99 +118,37 @@ public class SignUpCustomer extends javax.swing.JFrame {
         });
         jPanelRight.add(RegAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 300, -1));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
-        );
+        idnum.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        idnum.setForeground(new java.awt.Color(255, 255, 255));
+        idnum.setText("Identity Number");
+        jPanelRight.add(idnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
 
-        jPanelRight.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 300, 10));
-
-        jLabel6.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Identity Number");
-        jPanelRight.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Email");
-        jPanelRight.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
-
-        jTextField1.setBackground(new java.awt.Color(135, 191, 255));
-        jTextField1.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        RegIdnum.setBackground(new java.awt.Color(135, 191, 255));
+        RegIdnum.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        RegIdnum.setForeground(new java.awt.Color(255, 255, 255));
+        RegIdnum.setBorder(null);
+        RegIdnum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                RegIdnumActionPerformed(evt);
             }
         });
-        jPanelRight.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 300, -1));
+        jPanelRight.add(RegIdnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 300, -1));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
-        );
+        email.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        email.setForeground(new java.awt.Color(255, 255, 255));
+        email.setText("Email");
+        jPanelRight.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
 
-        jPanelRight.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 300, 10));
-
-        RegEmail.setEditable(false);
-        RegEmail.setBackground(new java.awt.Color(135, 191, 255));
-        RegEmail.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
-        RegEmail.setForeground(new java.awt.Color(255, 255, 255));
-        RegEmail.setBorder(null);
-        jPanelRight.add(RegEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 300, -1));
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
-        );
-
-        jPanelRight.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 300, 10));
-
-        jLabel8.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Gender");
-        jPanelRight.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, -1, -1));
-
-        jRadioButton1.setBackground(new java.awt.Color(135, 191, 255));
-        jRadioButton1.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Female");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        Regemail.setBackground(new java.awt.Color(135, 191, 255));
+        Regemail.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        Regemail.setForeground(new java.awt.Color(255, 255, 255));
+        Regemail.setBorder(null);
+        Regemail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                RegemailActionPerformed(evt);
             }
         });
-        jPanelRight.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, -1, -1));
-
-        jRadioButton2.setBackground(new java.awt.Color(135, 191, 255));
-        jRadioButton2.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Male");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
-        jPanelRight.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, -1, -1));
+        jPanelRight.add(Regemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 300, -1));
 
         jCheckBox1.setBackground(new java.awt.Color(135, 191, 255));
         jCheckBox1.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
@@ -253,34 +159,83 @@ public class SignUpCustomer extends javax.swing.JFrame {
                 jCheckBox1ActionPerformed(evt);
             }
         });
-        jPanelRight.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 560, -1, -1));
+        jPanelRight.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, -1, -1));
 
-        jPanel6.setBackground(new java.awt.Color(173, 215, 246));
+        SignUp.setBackground(new java.awt.Color(173, 215, 246));
+        SignUp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        SignUp.setForeground(new java.awt.Color(255, 255, 255));
+        SignUp.setText("Sign Up");
+        SignUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SignUpActionPerformed(evt);
+            }
+        });
+        jPanelRight.add(SignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 550, 100, 40));
 
-        jLabel9.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Sign Up");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel9)
-                .addContainerGap(21, Short.MAX_VALUE))
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jPanelRight.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, -1, 40));
-        jPanelRight.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, -1, -1));
-        jPanelRight.add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, -1, 660));
+        jPanelRight.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 300, 5));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanelRight.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 300, 5));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanelRight.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 300, 5));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanelRight.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 300, 5));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanelRight.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 300, 5));
 
         getContentPane().add(jPanelRight, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 510, 670));
 
@@ -288,8 +243,8 @@ public class SignUpCustomer extends javax.swing.JFrame {
         jPanelLeft.setToolTipText("");
         jPanelLeft.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/login.png"))); // NOI18N
-        jPanelLeft.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 160, 200));
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/login.png"))); // NOI18N
+        jPanelLeft.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 130, 200));
 
         getContentPane().add(jPanelLeft, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 670));
 
@@ -304,21 +259,21 @@ public class SignUpCustomer extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_RegAddressActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void RegemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegemailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_RegemailActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void RegIdnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegIdnumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RegIdnumActionPerformed
+
+    private void SignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SignUpActionPerformed
 
     /**
      * @param args the command line arguments
@@ -361,35 +316,63 @@ public class SignUpCustomer extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel PasswordInter;
+    private javax.swing.JLabel Password;
     private javax.swing.JTextField RegAddress;
-    private javax.swing.JTextField RegEmail;
+    private javax.swing.JTextField RegIdnum;
     private javax.swing.JTextField RegName;
     private javax.swing.JPasswordField RegPassword;
+    private javax.swing.JTextField Regemail;
+    private javax.swing.JButton SignUp;
+    private javax.swing.JLabel dolpick;
+    private javax.swing.JLabel email;
+    private javax.swing.JLabel idnum;
     private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanelLeft;
     private javax.swing.JPanel jPanelRight;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSlider jSlider1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel logo;
+    private javax.swing.JLabel name;
+    private javax.swing.JLabel signup;
     // End of variables declaration//GEN-END:variables
+
+
+    public javax.swing.JTextField getRegAddress() {
+        return RegAddress;
+    }
+
+    public javax.swing.JTextField getRegIdnum() {
+        return RegIdnum;
+    }
+
+    public javax.swing.JTextField getRegName() {
+        return RegName;
+    }
+    
+    public javax.swing.JPasswordField getRegPassword() {
+        return RegPassword;
+    }
+
+    /**
+     * @return the SignUp
+     */
+    public javax.swing.JButton getSignUp() {
+        return SignUp;
+    }
+
+    public void addlistener(ActionListener a){
+        SignUp.addActionListener(a);
+    }
+
+    public javax.swing.JTextField getRegemail() {
+        return Regemail;
+    }
+    
+
 }

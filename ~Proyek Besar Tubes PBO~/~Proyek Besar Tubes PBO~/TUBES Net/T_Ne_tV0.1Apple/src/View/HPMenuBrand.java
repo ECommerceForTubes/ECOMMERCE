@@ -9,12 +9,12 @@ package View;
  *
  * @author User
  */
-public class HPMenuSeller extends javax.swing.JFrame {
+public class HPMenuBrand extends javax.swing.JFrame {
 
     /**
      * Creates new form HPMenuSeller
      */
-    public HPMenuSeller() {
+    public HPMenuBrand() {
         initComponents();
     }
 
@@ -73,16 +73,16 @@ public class HPMenuSeller extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Item");
+        jLabel5.setText("Tickets");
 
         javax.swing.GroupLayout jPanelItemLayout = new javax.swing.GroupLayout(jPanelItem);
         jPanelItem.setLayout(jPanelItemLayout);
         jPanelItemLayout.setHorizontalGroup(
             jPanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelItemLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelItemLayout.createSequentialGroup()
+                .addContainerGap(35, Short.MAX_VALUE)
                 .addComponent(jLabel5)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
         jPanelItemLayout.setVerticalGroup(
             jPanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,7 +96,7 @@ public class HPMenuSeller extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Seller Option");
+        jLabel6.setText("Brand Option");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
@@ -108,7 +108,7 @@ public class HPMenuSeller extends javax.swing.JFrame {
         email.setToolTipText("");
         email.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/user.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/price-tag.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         email.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 130, -1));
 

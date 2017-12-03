@@ -5,7 +5,6 @@
  */
 package View;
 
-import Controller.ControllerSignUpCustomers;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
@@ -13,12 +12,12 @@ import javax.swing.JFrame;
  *
  * @author User
  */
-public class LoginCustomer extends javax.swing.JFrame {
+public class LoginBrand extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
      */
-    public LoginCustomer() {
+    public LoginBrand() {
         initComponents();
     }
 
@@ -35,6 +34,7 @@ public class LoginCustomer extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jButtonLoginB = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         PasswordLabel = new javax.swing.JLabel();
@@ -45,7 +45,6 @@ public class LoginCustomer extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabelSingUp = new javax.swing.JLabel();
-        jButtonLogin = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -60,13 +59,11 @@ public class LoginCustomer extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 512));
-        setPreferredSize(new java.awt.Dimension(800, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/ipad-tablet-technology-touch.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/bran.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 510));
 
@@ -74,6 +71,17 @@ public class LoginCustomer extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(135, 191, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButtonLoginB.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonLoginB.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonLoginB.setForeground(new java.awt.Color(51, 153, 255));
+        jButtonLoginB.setText("LOGIN");
+        jButtonLoginB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLoginBActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonLoginB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, 100, 40));
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,8 +123,8 @@ public class LoginCustomer extends javax.swing.JFrame {
 
         LoginLabel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         LoginLabel.setForeground(new java.awt.Color(255, 255, 255));
-        LoginLabel.setText("Login Customer");
-        jPanel1.add(LoginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
+        LoginLabel.setText("Login Brand");
+        jPanel1.add(LoginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, -1, -1));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 240, 240)));
 
@@ -159,17 +167,6 @@ public class LoginCustomer extends javax.swing.JFrame {
         });
         jPanel1.add(jLabelSingUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, -1, -1));
 
-        jButtonLogin.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonLogin.setForeground(new java.awt.Color(51, 153, 255));
-        jButtonLogin.setText("LOGIN");
-        jButtonLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonLoginActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButtonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 100, 40));
-
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 380, 510));
 
         pack();
@@ -181,13 +178,17 @@ public class LoginCustomer extends javax.swing.JFrame {
 
     private void jLabelSingUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSingUpMouseClicked
         // TODO add your handling code here:
-        new ControllerSignUpCustomers();
+        SignUpBrand singUpCus = new SignUpBrand();
+        singUpCus.setVisible(true);
+        singUpCus.pack();
+        singUpCus.setLocationRelativeTo(null);
+        singUpCus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_jLabelSingUpMouseClicked
 
-    private void jButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginActionPerformed
+    private void jButtonLoginBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonLoginActionPerformed
+    }//GEN-LAST:event_jButtonLoginBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,7 +231,7 @@ public class LoginCustomer extends javax.swing.JFrame {
     private javax.swing.JLabel PasswordLabel;
     private javax.swing.JLabel UsernameLabel;
     private javax.swing.JTextField in_username;
-    private javax.swing.JButton jButtonLogin;
+    private javax.swing.JButton jButtonLoginB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -242,34 +243,22 @@ public class LoginCustomer extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPasswordField jPasswordField1;
     // End of variables declaration//GEN-END:variables
-
-    /**
-     * @return the in_username
-     */
-    public javax.swing.JTextField getIn_username() {
+        public javax.swing.JTextField getIn_username() {
         return in_username;
     }
-    
 
-    /**
-     * @return the jPanelLoginCus
-     */
-
-    /**
-     * @return the jPasswordField1
-     */
     public javax.swing.JPasswordField getjPasswordField1() {
         return jPasswordField1;
     }
     
     public void addlistener(ActionListener a){
-        jButtonLogin.addActionListener(a);
+        jButtonLoginB.addActionListener(a);
     }
 
-    /**
-     * @return the jButtonLogin
-     */
-    public javax.swing.JButton getjButtonLogin() {
-        return jButtonLogin;
+    public javax.swing.JButton getjButtonLoginB() {
+        return jButtonLoginB;
     }
+
+
 }
+

@@ -11,12 +11,12 @@ import java.awt.event.ActionListener;
  *
  * @author User
  */
-public class SignUpSeller extends javax.swing.JFrame {
+public class SignUpBrand extends javax.swing.JFrame {
 
     /**
      * Creates new form Register
      */
-    public SignUpSeller() {
+    public SignUpBrand() {
         initComponents();
     }
 
@@ -158,12 +158,12 @@ public class SignUpSeller extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Identity Number");
+        jLabel6.setText("Id Brand :");
         jPanelRight.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
 
         jLabelemail.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLabelemail.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelemail.setText(" Email :");
+        jLabelemail.setText("Email :");
         jPanelRight.add(jLabelemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
 
         RegEmail.setBackground(new java.awt.Color(135, 191, 255));
@@ -242,8 +242,8 @@ public class SignUpSeller extends javax.swing.JFrame {
         email.setToolTipText("");
         email.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/man.png"))); // NOI18N
-        email.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 110, 200));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/price-tag.png"))); // NOI18N
+        email.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 130, 200));
 
         getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 730));
 
