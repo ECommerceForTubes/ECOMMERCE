@@ -41,16 +41,17 @@ public class ControllerLoginCustomer implements ActionListener{
                     hpMenuCustomers = new HPMenuCustomers();
                     hpMenuCustomers.setVisible(true);
                     hpMenuCustomers.setLocationRelativeTo(null);
+                    loginCustomer.setVisible(false);
                     
-                    //hpMenuCustomers.addlistener(this);
+                    //hpMenuCustomers.addlistener(this);  ********* ini semsntara
                     
                 } else {
                     JOptionPane.showConfirmDialog(loginCustomer, "Anda belum terdaftar", "Login Gagal", JOptionPane.WARNING_MESSAGE);
                 }
 
             } catch (Exception ee) {
-                 ee.printStackTrace();//penting
-               JOptionPane.showConfirmDialog(loginCustomer, ""+ee.getMessage(), ""+ee.getMessage(), JOptionPane.WARNING_MESSAGE);
+                ee.printStackTrace();//penting
+                JOptionPane.showConfirmDialog(loginCustomer, ""+ee.getMessage(), ""+ee.getMessage(), JOptionPane.WARNING_MESSAGE);
             }
         }
     }

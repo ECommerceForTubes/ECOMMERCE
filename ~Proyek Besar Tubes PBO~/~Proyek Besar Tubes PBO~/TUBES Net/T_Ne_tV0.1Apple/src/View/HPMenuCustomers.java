@@ -5,6 +5,8 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author User
@@ -28,13 +30,14 @@ public class HPMenuCustomers extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        email = new javax.swing.JPanel();
+        samping = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jTextAreaname = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        in_username = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        searchText = new javax.swing.JTextField();
+        jButtonSearch = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
@@ -45,20 +48,25 @@ public class HPMenuCustomers extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        email.setBackground(new java.awt.Color(135, 191, 255));
-        email.setToolTipText("");
-        email.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        samping.setBackground(new java.awt.Color(135, 191, 255));
+        samping.setToolTipText("");
+        samping.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/user.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        email.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 130, -1));
+        samping.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 130, -1));
 
         jLabel7.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Name :");
-        email.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+        samping.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 490));
+        jTextAreaname.setBackground(new java.awt.Color(135, 191, 255));
+        jTextAreaname.setColumns(20);
+        jTextAreaname.setRows(5);
+        samping.add(jTextAreaname, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 170, 30));
+
+        jPanel1.add(samping, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 490));
 
         jPanel2.setBackground(new java.awt.Color(173, 215, 246));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 191, 255), 3, true));
@@ -66,10 +74,10 @@ public class HPMenuCustomers extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/loupe.png"))); // NOI18N
         jLabel3.setText("jLabel3");
 
-        in_username.setBackground(new java.awt.Color(173, 215, 246));
-        in_username.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        in_username.setForeground(new java.awt.Color(255, 255, 255));
-        in_username.setBorder(null);
+        searchText.setBackground(new java.awt.Color(173, 215, 246));
+        searchText.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        searchText.setForeground(new java.awt.Color(255, 255, 255));
+        searchText.setBorder(null);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -79,7 +87,7 @@ public class HPMenuCustomers extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(in_username, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(searchText, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -87,22 +95,22 @@ public class HPMenuCustomers extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(in_username, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(searchText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 410, 50));
 
-        jButton1.setBackground(new java.awt.Color(135, 191, 255));
-        jButton1.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Search");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSearch.setBackground(new java.awt.Color(135, 191, 255));
+        jButtonSearch.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+        jButtonSearch.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSearch.setText("Search");
+        jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonSearchActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 90, 50));
+        jPanel1.add(jButtonSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 90, 50));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -124,9 +132,9 @@ public class HPMenuCustomers extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonSearchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,9 +172,7 @@ public class HPMenuCustomers extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel email;
-    private javax.swing.JTextField in_username;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonSearch;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel7;
@@ -174,5 +180,45 @@ public class HPMenuCustomers extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextAreaname;
+    private javax.swing.JPanel samping;
+    private javax.swing.JTextField searchText;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the jButtonSearch
+     */
+    public javax.swing.JButton getjButtonSearch() {
+        return jButtonSearch;
+    }
+
+    /**
+     * @param name the name to set
+     */
+ 
+
+    /**
+     * @return the searchText
+     */
+    public javax.swing.JTextField getSearchText() {
+        return searchText;
+    }
+     public void addlistener(ActionListener a){
+        jButtonSearch.addActionListener(a);
+    }
+
+    /**
+     * @return the jTextAreaname
+     */
+    public javax.swing.JTextArea getjTextAreaname() {
+        return jTextAreaname;
+    }
+
+    /**
+     * @param jTextAreaname the jTextAreaname to set
+     */
+    public void setjTextAreaname(javax.swing.JTextArea jTextAreaname) {
+        this.jTextAreaname = jTextAreaname;
+    }
+
 }
