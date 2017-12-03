@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import View.HPMenuCustomers;
 import View.LoginCustomer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class ControllerLoginCustomer implements ActionListener{
     LoginCustomer loginCustomer;
+    HPMenuCustomers hpMenuCustomers;
     Aplikasi model;
 
     public ControllerLoginCustomer() {
@@ -36,6 +38,11 @@ public class ControllerLoginCustomer implements ActionListener{
             
             try {
                 if (model.cekLogin(user, pass,"customer")!=null) {
+                    hpMenuCustomers = new HPMenuCustomers();
+                    hpMenuCustomers.setVisible(true);
+                    hpMenuCustomers.setLocationRelativeTo(null);
+                    
+                    //hpMenuCustomers.addlistener(this);
                     
                 } else {
                     JOptionPane.showConfirmDialog(loginCustomer, "Anda belum terdaftar", "Login Gagal", JOptionPane.WARNING_MESSAGE);
