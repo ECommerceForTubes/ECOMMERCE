@@ -26,15 +26,19 @@ public class Aplikasi {
         
     }
     
-   	public void tambahcust(String nama, String pass, String addrs, String email){
-   		Customer c = new Customer(nama,  pass,  addrs,  email);
-   		db.saveCust(c);
-   	}
+    public void tambahcust(String nama, String pass, String addrs, String email){
+        Customer c = new Customer(nama,  pass,  addrs,  email);
+        db.saveCust(c);
+    }
 
-	public void tambahSeller(String nama, String pass, String addrs, String email){
-   		Seller c = new Seller(nama, pass, addrs, email);
-   		db.saveSell(c);
-   	}
+    public void tambahSeller(String nama, String pass, String addrs, String email){
+        Seller c = new Seller(nama, pass, addrs, email);
+        db.saveSell(c);
+    }
 
+    public String cekLogin(String username, String password, String Status) {
+        return null;
+        //return db.getStatus(username, password, Status);
+    }
 //   	public void deleteSeller()   
 }
