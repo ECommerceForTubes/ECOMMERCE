@@ -120,20 +120,22 @@ public class Database {
         }
     }
 
-    public String getloginCust(String email, String password) {
-        String status = null;
+    public String getlogin(String email, String password, String status) {
+        String st = null;
         try {
-            String query = "select * from Customer where username= '" + email + "' and password='" + password + "'";
+            String query = "select * from "+status+" where username= '" + email + "' and password='" + password + "'";
             ResultSet rs = statement.executeQuery(query);
             if (rs.next()) {
-                status = rs.getString(1);
+                st = rs.getString(1);
             }
-            return status;
+            return st;
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "eror get status", "Eror get status", JOptionPane.WARNING_MESSAGE);
         }
-        return status;
+        return st;
     }
+
+
 
     public void savespayment(int idtransaction, Payment s) {
         try {
