@@ -31,7 +31,6 @@ public class ControllerSignUpBrand implements ActionListener{
             String pass = signUpBrand.getRegPassword().getText();
             String email = signUpBrand.getRegEmail().getText();
             String addrs = signUpBrand.getRegAddress().getText();
-            String idnum = signUpBrand.getRegIdentnumber().getText();
             System.out.println(user + pass);
         }
     }
