@@ -16,11 +16,13 @@ import java.awt.event.ActionListener;
  */
 public class ControllerHPMenuCustomers implements ActionListener{
     HPMenuCustomers hpMenuCustomers;
-    public ControllerHPMenuCustomers() {
+
+    public ControllerHPMenuCustomers(String user) {
         hpMenuCustomers= new HPMenuCustomers ();
         hpMenuCustomers.setVisible(true);
         hpMenuCustomers.setLocationRelativeTo(null);
         hpMenuCustomers.addlistener(this);
+        hpMenuCustomers.getjTextAreaName(user);
     }
     
     @Override

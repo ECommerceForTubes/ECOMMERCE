@@ -38,12 +38,8 @@ public class ControllerLoginCustomer implements ActionListener{
             
             try {
                 if (model.cekLogin(user, pass,"customer")!=null) {
-                    hpMenuCustomers = new HPMenuCustomers();
-                    hpMenuCustomers.setVisible(true);
-                    hpMenuCustomers.setLocationRelativeTo(null);
+                    new ControllerHPMenuCustomers(user);
                     loginCustomer.setVisible(false);
-                    
-                    //hpMenuCustomers.addlistener(this);  ********* ini semsntara
                     
                 }else if (model.cekLogin(user, pass,"admin")!=null){
                     System.out.println("SUKSES ADMIN BRO");//<<<<<DIGANTI HOMEPAGE
@@ -52,8 +48,8 @@ public class ControllerLoginCustomer implements ActionListener{
                 }
 
             } catch (Exception ee) {
-                ee.printStackTrace();//penting
-                JOptionPane.showConfirmDialog(loginCustomer, ""+ee.getMessage(), ""+ee.getMessage(), JOptionPane.WARNING_MESSAGE);
+                 ee.printStackTrace();//penting
+               JOptionPane.showConfirmDialog(loginCustomer, ""+ee.getMessage(), ""+ee.getMessage(), JOptionPane.WARNING_MESSAGE);
             }
         }
     }
