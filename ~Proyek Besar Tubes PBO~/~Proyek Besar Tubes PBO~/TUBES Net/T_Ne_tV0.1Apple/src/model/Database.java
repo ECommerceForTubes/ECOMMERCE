@@ -82,11 +82,10 @@ public class Database {
 
     public void saveitem(Item s, int idseller) {
         try {
-            String query1 = "insert into item(idseller ,code_item ,category,description ,stock, price) values"
+            String query1 = "insert into item(idseller ,nama ,category ,stock, price) values"
                     + "('" + idseller + "', "
                     + "'" + s.getCode_item() + "', "
                     + "'" + s.getCategory() + "', "
-                    + "'" + s.getDescription() + "', "
                     + "'" + s.getStock() + "', "
                     + "'" + s.getPrice() + "')";
             statement.execute(query1);
@@ -97,7 +96,7 @@ public class Database {
 
     public void saveservice(int idowner, Services s) {
         try {
-            String query1 = "insert into service(idowner, Service_code, Type_service, Description, Price) values"
+            String query1 = "insert into service(idowner, nama, Type_service, Price) values"
                     + "('" + idowner + "', "
                     + "'" + s.getService_code() + "', "
                     + "'" + s.getType_service() + "', "
@@ -126,7 +125,6 @@ public class Database {
         try {
             String query = "select * from Customer where username= '" + email + "' and password='" + password + "'";
             ResultSet rs = statement.executeQuery(query);
-            //String status = null;
             if (rs.next()) {
                 status = rs.getString(1);
             }
@@ -166,8 +164,8 @@ public class Database {
             String query = "select * from Customer";
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()){
-                Customer a = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(5));
-                daftarCust.add(a);
+//                Customer a = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(5));
+//                daftarCust.add(a);
             }return daftarCust;
         } catch (Exception e) {
             throw new IllegalArgumentException("terjadi kesalahan saat load admin");

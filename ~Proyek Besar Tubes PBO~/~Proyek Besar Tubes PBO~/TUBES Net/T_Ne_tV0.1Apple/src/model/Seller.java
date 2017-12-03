@@ -20,9 +20,8 @@ public class Seller extends Account{
     private List<Item> items= new ArrayList<>();
     private List<Donation> donations= new ArrayList<>();
 
-    public Seller(String name, String password, String address, String id_card, String e_mail, String id_seller) {
-        super(name, password, address, id_card, e_mail);
-        this.id_seller = id_seller;
+    public Seller(String name, String password, String address,  String e_mail) {
+        super(name, password, address, e_mail);
     }
 
     public String getId_seller() {

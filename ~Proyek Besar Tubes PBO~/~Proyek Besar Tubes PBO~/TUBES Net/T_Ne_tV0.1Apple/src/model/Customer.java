@@ -17,10 +17,11 @@ public class Customer extends Account{
     private List<Transaction> transactions= new ArrayList<>();
     private List<Donation> donations= new ArrayList<>();
 
-    public Customer(int id_customer, String name, String password, String address, String id_card, String e_mail) {
-        super(name, password, address, id_card, e_mail);
-        this.id_customer = id_customer;
+    public Customer(String name, String password, String address, String e_mail) {
+        super(name, password, address, e_mail);
     }
+    
+    
     
     public void addDonation(String name, String type_donation, String discription, String date, int count_donation){
        Donation donation = new Donation(name, type_donation, discription, date, count_donation);

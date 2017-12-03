@@ -16,11 +16,25 @@ import model.Seller;
  * @author Dimass
  */
 public class Aplikasi {
-    Database DB;
+    Database db;
     ArrayList<Customer> tabCus = new ArrayList();
     ArrayList<Seller> tabSell = new ArrayList<>();
-    
-    
 
+    public Aplikasi(){
+        db = new Database();
+        db.connect();
+        
+    }
     
+   	public void tambahcust(String nama, String pass, String addrs, String email){
+   		Customer c = new Customer(nama,  pass,  addrs,  email);
+   		db.saveCust(c);
+   	}
+
+	public void tambahSeller(String nama, String pass, String addrs, String email){
+   		Seller c = new Seller(nama, pass, addrs, email);
+   		db.saveSell(c);
+   	}
+
+//   	public void deleteSeller()   
 }
