@@ -94,20 +94,19 @@ public class Database {
         }
     }
 
-    public void saveservice(String idowner, Services s) {
+    public void saveservice(Services s) {
         try {
-            String query1 = "insert into service(idowner, nama, Type_service, Price) values"
-                    + "('" + idowner + "', "
-                    + "'" + s.getService_code() + "', "
+            String query1 = "insert into courier(idcourier, courier_name, price) values"
+                    + "('" + s.getidowner() + "', "
+                    + "'" + s.getnama() + "', "
                     + "'" + s.getType_service() + "', "
-                    + "'" + s.getDescription() + "', "
                     + "'" + s.getPrice() +  "')";
             statement.execute(query1);
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "Data masih kosong atau Email sudah ada", "Terjadi kesalahan saat insert data", JOptionPane.WARNING_MESSAGE);
         }
     }
-
+    
     public void savecourier(Courier s) {
         try {
             String query1 = "insert into courier(idcourier, courier_name, price) values"
@@ -193,14 +192,27 @@ public class Database {
             String query = "select * from Customer";
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()){
-//                Customer a = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(5));
-//                daftarCust.add(a);
+                Customer a = new Customer(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+                daftarCust.add(a);
             }return daftarCust;
         } catch (Exception e) {
-            throw new IllegalArgumentException("terjadi kesalahan saat load admin");
+            throw new IllegalArgumentException("terjadi kesalahan saat load Customer");
         }
     }
     
+    public ArrayList<Seller> loadSell(){
+        try {
+            ArrayList<Seller> daftarSeller = new ArrayList();
+            String query = "select * from Seller";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()){
+                Seller a = new Seller(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+                daftarSeller.add(a);
+            }return daftarSeller;
+        } catch (Exception e) {
+            throw new IllegalArgumentException("terjadi kesalahan saat load Customer");
+        }
+    }
     
     
     public ResultSet getData(String str) { 

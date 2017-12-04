@@ -11,24 +11,24 @@ package model;
  */
 public class Services {
 //>>--------------------------
-    private String service_code;
-    private String description;
+    private String idowner;
+    private String nama;
     private String type_service;
     private double price;
 
-    public Services(String service_code, String description, String type_service, double price) {
-        this.service_code = service_code;
-        this.description = description;
+    public Services(String idowner, String nama, String type_service, double price) {
+        this.idowner = idowner;
+        this.nama = nama;
         this.type_service = type_service;
         this.price = price;
     }
 
-    public void setService_code(String service_code) {
-        this.service_code = service_code;
+    public void setidowner(String idowner) {
+        this.idowner = idowner;
     }
 
-    public String getService_code() {
-        return service_code;
+    public String getidowner() {
+        return idowner;
     }
 
     public void setType_service(String type_service) {
@@ -39,12 +39,12 @@ public class Services {
         return type_service;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setnama(String nama) {
+        this.nama = nama;
     }
 
-    public String getDescription() {
-        return description;
+    public String getnama() {
+        return nama;
     }
 
     public void setPrice(double price) {
