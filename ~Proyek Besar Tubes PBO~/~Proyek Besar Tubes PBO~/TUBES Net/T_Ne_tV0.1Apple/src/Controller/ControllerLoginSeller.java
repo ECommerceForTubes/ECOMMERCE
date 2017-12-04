@@ -41,7 +41,7 @@ public class ControllerLoginSeller implements ActionListener {
                     hp.setVisible(true);
                     hp.setLocationRelativeTo(null);
                 }else if(model.cekLogin(user, pass, "admin")!=null){
-                    System.out.println("SUKSES ADMIN BROO");
+                    System.out.println("SUKSES ADMIN BROO");//<<<<<DIGANTI HOMEPAGE
                 }else{
                     JOptionPane.showConfirmDialog(loginSeller, "Anda belum terdaftar", "Login Gagal", JOptionPane.WARNING_MESSAGE);
                 }
