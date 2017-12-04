@@ -35,9 +35,9 @@ public class ListProduct extends javax.swing.JFrame {
         nametextfild = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         in_username = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        BSearch = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TProduct = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -102,18 +102,18 @@ public class ListProduct extends javax.swing.JFrame {
 
         jPanel1.add(nametextfild, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 410, 50));
 
-        jButton1.setBackground(new java.awt.Color(135, 191, 255));
-        jButton1.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Search");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BSearch.setBackground(new java.awt.Color(135, 191, 255));
+        BSearch.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+        BSearch.setForeground(new java.awt.Color(255, 255, 255));
+        BSearch.setText("Search");
+        BSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BSearchActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, 90, 50));
+        jPanel1.add(BSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, 90, 50));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TProduct.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -124,7 +124,7 @@ public class ListProduct extends javax.swing.JFrame {
                 "Product", "Harga", "Penjual"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TProduct);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 510, 320));
 
@@ -138,9 +138,9 @@ public class ListProduct extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BSearchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BSearchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,17 +178,17 @@ public class ListProduct extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BSearch;
+    private javax.swing.JTable TProduct;
     private javax.swing.JTextArea aname;
     private javax.swing.JPanel email;
     private javax.swing.JTextField in_username;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JPanel nametextfild;
     // End of variables declaration//GEN-END:variables
 }

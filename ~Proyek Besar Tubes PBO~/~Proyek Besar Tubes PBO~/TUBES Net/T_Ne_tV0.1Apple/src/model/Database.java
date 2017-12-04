@@ -94,20 +94,19 @@ public class Database {
         }
     }
 
-    public void saveservice(String idowner, Services s) {
+    public void saveservice(Services s) {
         try {
-            String query1 = "insert into service(idowner, nama, Type_service, Price) values"
-                    + "('" + idowner + "', "
-                    + "'" + s.getService_code() + "', "
+            String query1 = "insert into courier(idcourier, courier_name, price) values"
+                    + "('" + s.getidowner() + "', "
+                    + "'" + s.getnama() + "', "
                     + "'" + s.getType_service() + "', "
-                    + "'" + s.getDescription() + "', "
                     + "'" + s.getPrice() +  "')";
             statement.execute(query1);
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "Data masih kosong atau Email sudah ada", "Terjadi kesalahan saat insert data", JOptionPane.WARNING_MESSAGE);
         }
     }
-
+    
     public void savecourier(Courier s) {
         try {
             String query1 = "insert into courier(idcourier, courier_name, price) values"
@@ -120,6 +119,18 @@ public class Database {
         }
     }
 
+    public void savetiket(Tickets s, String idbrand) {
+        try {
+            String query1 = "INSERT INTO `tiket`(`idbrand`, `type_ticket`, `price`) VALUES"
+                    + "('" +idbrand+ "', "
+                    + "'" + s.getTickets_type() + "', "
+                    + "'" + s.getPrice()+ "')";
+            statement.execute(query1);
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, "Data masih kosong atau email sudah ada", "Terjadi kesalahan saat insert data", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+    
     public String getlogin(String email, String password, String status) {
         String st = null;
         try {
@@ -151,19 +162,7 @@ public class Database {
         }
         return st;
     }
-
-    public void savetiket(Tickets s, String idbrand) {
-        try {
-            String query1 = "INSERT INTO `tiket`(`idbrand`, `type_ticket`, `price`) VALUES"
-                    + "('" +idbrand+ "', "
-                    + "'" + s.getTickets_type() + "', "
-                    + "'" + s.getPrice()+ "')";
-            statement.execute(query1);
-        } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, "Data masih kosong atau email sudah ada", "Terjadi kesalahan saat insert data", JOptionPane.WARNING_MESSAGE);
-        }
-    }
-
+    
     public void savespayment(int idtransaction, Payment s) {
         try {
             String query1 = "insert into payment(idtransaction, idpayment, Type_payment, total_payment, status) values"
@@ -178,12 +177,38 @@ public class Database {
         }
     }
 
+    public String cekPemilik(String pemilik, String Item){
+        String st = null;
+        try {
+            String query = "select * from item where idowner='"+ pemilik + "' AND nama='"+Item+"'";
+            ResultSet rs = statement.executeQuery(query);
+            if (rs.next()) {
+                st = rs.getString(1);                
+            }
+            return st;
+        } catch (Exception e) {
+           JOptionPane.showConfirmDialog(null, "error get status", "Error get status", JOptionPane.WARNING_MESSAGE);
+
+        }
+        return st;
+    }
+    
+    public void DeleteItem(String nama){
+        try {
+            String query1 = "Delete from item where nama='" + nama + "'";
+            statement.execute(query1);
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, "Data Tidak Ada", "Data Terhapus", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+    
+    
     public void Deleteuser(String email, String status) {
         try {
             String query1 = "Delete from "+ status +" where email='" + email + "'";
             statement.execute(query1);
         } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, "Data Terhapus", "Data Terhapus", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showConfirmDialog(null, "Data Tidak Ada", "Data Terhapus", JOptionPane.WARNING_MESSAGE);
         }
     }
 
@@ -193,15 +218,83 @@ public class Database {
             String query = "select * from Customer";
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()){
-//                Customer a = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(5));
-//                daftarCust.add(a);
+                Customer a = new Customer(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+                daftarCust.add(a);
             }return daftarCust;
         } catch (Exception e) {
-            throw new IllegalArgumentException("terjadi kesalahan saat load admin");
+            throw new IllegalArgumentException("terjadi kesalahan saat load Customer");
         }
     }
     
+    public ArrayList<Seller> loadSell(){
+        try {
+            ArrayList<Seller> daftarSeller = new ArrayList();
+            String query = "select * from Seller";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()){
+                Seller a = new Seller(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+                daftarSeller.add(a);
+            }return daftarSeller;
+        } catch (Exception e) {
+            throw new IllegalArgumentException("terjadi kesalahan saat load Customer");
+        }
+    }
     
+    public ArrayList<Brand> loadBrand(){
+        try {
+            ArrayList<Brand> daftarBrand = new ArrayList();
+            String query = "select * from brand";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()){
+                Brand a = new Brand(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+                daftarBrand.add(a);
+            }return daftarBrand;
+        } catch (Exception e) {
+            throw new IllegalArgumentException("terjadi kesalahan saat load Customer");
+        }
+    }
+    
+    public ArrayList<Item> loadItemSel(String idseller){
+        try {
+            ArrayList<Item> dftitem = new ArrayList();
+            String query = "select * from brand where idseller='"+idseller+"'";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()){
+                Item a = new Item(rs.getString(2), rs.getString(3), rs.getDouble(4));
+                dftitem.add(a);
+            }return dftitem;
+        } catch (Exception e) {
+            throw new IllegalArgumentException("terjadi kesalahan saat load Customer");
+        }
+    }
+    
+    public ArrayList<Tickets> loadTicketBrn(String idbrand){
+        try {
+            ArrayList<Tickets> dft = new ArrayList();
+            String query = "select * from ticket where idbrand='"+idbrand+"'";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()){
+                Tickets a = new Tickets(rs.getString(2), rs.getDouble(3));
+                dft.add(a);
+            }return dft;
+        } catch (Exception e) {
+            throw new IllegalArgumentException("terjadi kesalahan saat load Customer");
+        }
+    }
+    
+    public ArrayList<Services> loadSrv(String idowner){
+        try {
+            ArrayList<Services> dft = new ArrayList();
+            String query = "select * from ticket where idbrand='"+idowner+"'";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()){
+                Services a = new Services(rs.getString(1),rs.getString(2),rs.getString(3), rs.getDouble(4));
+                dft.add(a);
+            }return dft;
+        } catch (Exception e) {
+            throw new IllegalArgumentException("terjadi kesalahan saat load Customer");
+        }
+    }
     
     public ResultSet getData(String str) { 
         try{

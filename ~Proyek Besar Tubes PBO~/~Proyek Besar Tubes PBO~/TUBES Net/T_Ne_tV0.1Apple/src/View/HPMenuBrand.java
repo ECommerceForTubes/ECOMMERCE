@@ -143,9 +143,8 @@ public class HPMenuBrand extends javax.swing.JFrame {
 
     private void jPanelItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelItemMouseClicked
         // TODO add your handling code here:
-        this.dispose();
         new ControllerAddTickets();
-        
+        this.dispose();
     }//GEN-LAST:event_jPanelItemMouseClicked
 
     /**

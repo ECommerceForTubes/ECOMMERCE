@@ -63,6 +63,7 @@ public class HPMenuCustomers extends javax.swing.JFrame {
         jLabel7.setText("Name :");
         email.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
+        jTextAreaName.setEditable(false);
         jTextAreaName.setBackground(new java.awt.Color(135, 191, 255));
         jTextAreaName.setColumns(20);
         jTextAreaName.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
