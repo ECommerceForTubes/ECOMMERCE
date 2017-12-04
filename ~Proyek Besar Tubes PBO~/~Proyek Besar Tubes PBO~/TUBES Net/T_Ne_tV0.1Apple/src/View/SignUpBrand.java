@@ -167,7 +167,7 @@ public class SignUpBrand extends javax.swing.JFrame {
                 RegEmailActionPerformed(evt);
             }
         });
-        jPanelRight.add(RegEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 300, -1));
+        jPanelRight.add(RegEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 300, -1));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);

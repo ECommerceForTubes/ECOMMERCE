@@ -7,12 +7,14 @@ package View;
 
 import java.awt.event.ActionListener;
 
+
+
 /**
  *
  * @author User
  */
 public class HPMenuCustomers extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form HPMenuSeller
      */

@@ -104,7 +104,7 @@ public class LoginCustomer extends javax.swing.JFrame {
 
         UsernameLabel.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         UsernameLabel.setForeground(new java.awt.Color(255, 255, 255));
-        UsernameLabel.setText("Username");
+        UsernameLabel.setText("Email");
         jPanel1.add(UsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
         in_username.setBackground(new java.awt.Color(135, 191, 255));

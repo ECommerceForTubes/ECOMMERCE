@@ -40,12 +40,13 @@ public class Database {
 
     public void saveCust(Customer c) {
         try {
-            String query1 = "insert into customer(id_customer,name,password,address, email) values"
+            String query1 = "INSERT INTO `customer`(`idcustomer`, `name`, `password`, `address`, `email`) VALUES"
                     + "('" + "idc_"+c.getE_mail() + "', "
                     + "'" + c.getName() + "', "
                     + "'" + c.getPassword() + "', "
                     + "'" + c.getAddress() + "', "
                     + "'" + c.getE_mail() + "')";
+            
             statement.execute(query1);
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "Data masih kosong atau Email sudah ada", "Terjadi kesalahan saat insert data", JOptionPane.WARNING_MESSAGE);
@@ -54,7 +55,7 @@ public class Database {
 
     public void saveSell(Seller s) {
         try {
-            String query1 = "insert into Seller(id_seller,name,password,address, email) values"
+            String query1 = "INSERT INTO `seller`(`idseller`, `name`, `password`, `address`, `email`)  values"
                     + "('" +"ids_"+s.getE_mail()+ "', "
                     + "'" + s.getName() + "', "
                     + "'" + s.getPassword() + "', "
@@ -68,12 +69,12 @@ public class Database {
 
     public void savebrand(Brand s) {
         try {
-            String query1 = "insert into Seller(id_customer,name,password,address, email) values"
+            String query1 = "INSERT INTO `brand`(`idbrand`, `nama`, `email`, `password`, `address`) VALUES"
                     + "('" +"idb_"+s.getE_mail()+ "', "
                     + "'" + s.getName() + "', "
-                    + "'" + s.getPassword() + "', "
-                    + "'" + s.getAddress() + "', "
-                    + "'" + s.getE_mail() + "')";
+                    + "'" + s.getE_mail()+ "', "
+                    + "'" + s.getPassword()+ "', "
+                    + "'" + s.getAddress()+ "')";
             statement.execute(query1);
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "Data masih kosong atau email sudah ada", "Terjadi kesalahan saat insert data", JOptionPane.WARNING_MESSAGE);
@@ -121,6 +122,24 @@ public class Database {
     }
 
     public String getlogin(String email, String password, String status) {
+        String st = null;
+        try {
+            String query = "select * from "+status+" where email= '" + email + "' and password='" + password + "'";
+            ResultSet rs = statement.executeQuery(query);
+            if (rs.next()) {
+                st = rs.getString(1);
+            }
+            return st;
+        } catch (Exception e) {
+           JOptionPane.showConfirmDialog(null, "eror get status", "Eror get status", JOptionPane.WARNING_MESSAGE);
+
+        }
+        return st;
+    }
+    
+    
+    
+        public String getSingUp (String email, String password, String status) {
         String st = null;
         try {
             String query = "select * from "+status+" where email= '" + email + "' and password='" + password + "'";

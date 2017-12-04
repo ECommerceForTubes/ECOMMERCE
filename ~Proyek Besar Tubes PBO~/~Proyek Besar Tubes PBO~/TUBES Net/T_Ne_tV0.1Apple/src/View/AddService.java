@@ -37,9 +37,9 @@ public class AddService extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         PasswordInter = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        SignUp = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        RegName = new javax.swing.JTextField();
+        add = new javax.swing.JButton();
+        tipe = new javax.swing.JComboBox<>();
+        RegHarga = new javax.swing.JTextField();
         PasswordInter1 = new javax.swing.JLabel();
         RegName1 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
@@ -96,32 +96,32 @@ public class AddService extends javax.swing.JFrame {
 
         jPanelRight.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 300, 5));
 
-        SignUp.setBackground(new java.awt.Color(173, 215, 246));
-        SignUp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        SignUp.setForeground(new java.awt.Color(255, 255, 255));
-        SignUp.setText("Sign Up");
-        SignUp.addActionListener(new java.awt.event.ActionListener() {
+        add.setBackground(new java.awt.Color(173, 215, 246));
+        add.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        add.setForeground(new java.awt.Color(255, 255, 255));
+        add.setText("Add");
+        add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SignUpActionPerformed(evt);
+                addActionPerformed(evt);
             }
         });
-        jPanelRight.add(SignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 100, 40));
+        jPanelRight.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 100, 40));
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanelRight.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 140, -1));
+        tipe.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Photograpy", "Wedding Organizer", "Service Electronik" }));
+        jPanelRight.add(tipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 140, -1));
 
-        RegName.setBackground(new java.awt.Color(135, 191, 255));
-        RegName.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        RegName.setForeground(new java.awt.Color(255, 255, 255));
-        RegName.setBorder(null);
-        RegName.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        RegName.addActionListener(new java.awt.event.ActionListener() {
+        RegHarga.setBackground(new java.awt.Color(135, 191, 255));
+        RegHarga.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        RegHarga.setForeground(new java.awt.Color(255, 255, 255));
+        RegHarga.setBorder(null);
+        RegHarga.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        RegHarga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegNameActionPerformed(evt);
+                RegHargaActionPerformed(evt);
             }
         });
-        jPanelRight.add(RegName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 300, -1));
+        jPanelRight.add(RegHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 300, -1));
 
         PasswordInter1.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         PasswordInter1.setForeground(new java.awt.Color(255, 255, 255));
@@ -167,17 +167,17 @@ public class AddService extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpActionPerformed
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SignUpActionPerformed
+    }//GEN-LAST:event_addActionPerformed
 
     private void RegName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegName1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_RegName1ActionPerformed
 
-    private void RegNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegNameActionPerformed
+    private void RegHargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegHargaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RegNameActionPerformed
+    }//GEN-LAST:event_RegHargaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,11 +218,10 @@ public class AddService extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel PasswordInter;
     private javax.swing.JLabel PasswordInter1;
-    private javax.swing.JTextField RegName;
+    private javax.swing.JTextField RegHarga;
     private javax.swing.JTextField RegName1;
-    private javax.swing.JButton SignUp;
+    private javax.swing.JButton add;
     private javax.swing.JPanel email;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -232,9 +231,40 @@ public class AddService extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelRight;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSlider jSlider1;
+    private javax.swing.JComboBox<String> tipe;
     // End of variables declaration//GEN-END:variables
 
-    
+    /**
+     * @return the RegHarga
+     */
+    public javax.swing.JTextField getRegHarga() {
+        return RegHarga;
+    }
+
+    /**
+     * @return the RegName1
+     */
+    public javax.swing.JTextField getRegName1() {
+        return RegName1;
+    }
+
+    /**
+     * @return the add
+     */
+    public javax.swing.JButton getAdd() {
+        return add;
+    }
+
+    /**
+     * @return the tipe
+     */
+    public javax.swing.JComboBox<String> getTipe() {
+        return tipe;
+    }
+
+      public void addlistener(ActionListener a){
+        add.addActionListener(a);
+    } 
 
 
 }

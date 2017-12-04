@@ -10,7 +10,7 @@ package View;
  * @author User
  */
 public class HPMenuSeller extends javax.swing.JFrame {
-
+    String s;
     /**
      * Creates new form HPMenuSeller
      */
@@ -37,6 +37,7 @@ public class HPMenuSeller extends javax.swing.JFrame {
         email = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        aname = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -45,6 +46,7 @@ public class HPMenuSeller extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelService.setBackground(new java.awt.Color(135, 191, 255));
+        jPanelService.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,6 +72,7 @@ public class HPMenuSeller extends javax.swing.JFrame {
         jPanel1.add(jPanelService, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 190, 70));
 
         jPanelItem.setBackground(new java.awt.Color(135, 191, 255));
+        jPanelItem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -102,6 +105,7 @@ public class HPMenuSeller extends javax.swing.JFrame {
         jLabelViewProduct.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jLabelViewProduct.setForeground(new java.awt.Color(255, 255, 255));
         jLabelViewProduct.setText("View Our Product");
+        jLabelViewProduct.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(jLabelViewProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, -1, -1));
 
         email.setBackground(new java.awt.Color(135, 191, 255));
@@ -116,6 +120,13 @@ public class HPMenuSeller extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Name :");
         email.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+
+        aname.setBackground(new java.awt.Color(135, 191, 255));
+        aname.setColumns(20);
+        aname.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        aname.setForeground(new java.awt.Color(255, 255, 255));
+        aname.setRows(5);
+        email.add(aname, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 180, 20));
 
         jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 490));
 
@@ -160,6 +171,7 @@ public class HPMenuSeller extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea aname;
     private javax.swing.JPanel email;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -171,5 +183,10 @@ public class HPMenuSeller extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelItem;
     private javax.swing.JPanel jPanelService;
     // End of variables declaration//GEN-END:variables
-
+    
+    public void getjTextAreaNamef(String user) {
+        aname.append(user);
+    }
+    
+    
 }

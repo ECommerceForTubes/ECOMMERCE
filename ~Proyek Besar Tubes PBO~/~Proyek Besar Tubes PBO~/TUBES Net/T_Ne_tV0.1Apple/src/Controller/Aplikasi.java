@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import model.Brand;
 import model.Customer;
 import model.Database;
 import model.Seller;
@@ -35,10 +36,20 @@ public class Aplikasi {
         Seller c = new Seller(nama, pass, addrs, email);
         db.saveSell(c);
     }
+    
+    public void tambahBrand(String nama, String pass, String addrs, String email){
+        Brand b = new Brand(nama, pass, addrs, email);
+        db.savebrand(b);
+    }
 
     public String cekLogin(String username, String password, String Status) {
         
         return db.getlogin(username, password, Status);
+    }
+    
+    public String cekSignUp(String username, String password, String Status) {
+        
+        return db.getSingUp(username, password, Status);
     }
 //   	public void deleteSeller()   
 }
