@@ -32,11 +32,6 @@ public class Seller extends Account{
         this.id_seller = id_seller;
     }
     
-    public void addItem(String item_code, String description, String category, double price, int stock){
-        Item item = new Item(item_code, description, category, price, stock);
-        items.add(item);
-    }
-    
     public void addService(String service_code, String description, String type_service, double price){
         Services service = new Services(service_code, description, type_service, price);
         services.add(service);

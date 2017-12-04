@@ -29,9 +29,6 @@ public class Brand extends Account{
         return id_brand;
     }
     
-    public void addTickets(String tickets_code, String tickets_type, String schedule, double price, int stock){
-        Tickets ticket = new Tickets(tickets_code, tickets_type, schedule, price, stock);
-        tickets.add(ticket);
-    }
+    
     
 }

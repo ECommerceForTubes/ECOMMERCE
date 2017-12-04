@@ -81,13 +81,12 @@ public class Database {
         }
     }
 
-    public void saveitem(Item s, int idseller) {
+    public void saveitem(Item s, String idseller) {
         try {
-            String query1 = "insert into item(idseller ,nama ,category ,stock, price) values"
+            String query1 = "insert into item(idseller ,nama ,category , price) values"
                     + "('" + idseller + "', "
                     + "'" + s.getCode_item() + "', "
                     + "'" + s.getCategory() + "', "
-                    + "'" + s.getStock() + "', "
                     + "'" + s.getPrice() + "')";
             statement.execute(query1);
         } catch (Exception e) {
@@ -95,7 +94,7 @@ public class Database {
         }
     }
 
-    public void saveservice(int idowner, Services s) {
+    public void saveservice(String idowner, Services s) {
         try {
             String query1 = "insert into service(idowner, nama, Type_service, Price) values"
                     + "('" + idowner + "', "
@@ -137,15 +136,13 @@ public class Database {
         return st;
     }
     
-    
-    
-        public String getSingUp (String email, String password, String status) {
-        String st = null;
+    public Item getItem(String nama) {
+        Item st = null ;
         try {
-            String query = "select * from "+status+" where email= '" + email + "' and password='" + password + "'";
+            String query = "select * from item where nama='"+ nama + "'";
             ResultSet rs = statement.executeQuery(query);
             if (rs.next()) {
-                st = rs.getString(1);
+                st = new Item(rs.getString(2),rs.getString(3), rs.getDouble(4));
             }
             return st;
         } catch (Exception e) {
@@ -155,7 +152,17 @@ public class Database {
         return st;
     }
 
-
+    public void savetiket(Tickets s, String idbrand) {
+        try {
+            String query1 = "INSERT INTO `tiket`(`idbrand`, `type_ticket`, `price`) VALUES"
+                    + "('" +idbrand+ "', "
+                    + "'" + s.getTickets_type() + "', "
+                    + "'" + s.getPrice()+ "')";
+            statement.execute(query1);
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, "Data masih kosong atau email sudah ada", "Terjadi kesalahan saat insert data", JOptionPane.WARNING_MESSAGE);
+        }
+    }
 
     public void savespayment(int idtransaction, Payment s) {
         try {
@@ -193,6 +200,8 @@ public class Database {
             throw new IllegalArgumentException("terjadi kesalahan saat load admin");
         }
     }
+    
+    
     
     public ResultSet getData(String str) { 
         try{
