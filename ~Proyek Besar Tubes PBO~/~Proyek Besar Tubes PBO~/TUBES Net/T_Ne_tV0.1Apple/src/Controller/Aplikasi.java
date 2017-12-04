@@ -52,8 +52,16 @@ public class Aplikasi {
     
     public void tambahticket(String type, double harga, String idbrand){
         Tickets t = new Tickets(type,harga);
-//        db.s
+        db.savetiket(t, idbrand);
     }
+    
+    public void DeleteItem(String namaItem, String idSeller){
+        if (db.cekPemilik(idSeller, namaItem)!=null) {
+            db.DeleteItem(namaItem);
+        }
+        
+    }
+    
     
     
 //   	public void deleteSeller()   
