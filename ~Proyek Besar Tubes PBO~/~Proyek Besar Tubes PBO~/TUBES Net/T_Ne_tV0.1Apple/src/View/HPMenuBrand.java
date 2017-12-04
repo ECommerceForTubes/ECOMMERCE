@@ -5,6 +5,7 @@
  */
 package View;
 
+import Controller.ControllerAddService;
 import Controller.ControllerAddTickets;
 
 /**
@@ -49,6 +50,11 @@ public class HPMenuBrand extends javax.swing.JFrame {
 
         jPanelService.setBackground(new java.awt.Color(135, 191, 255));
         jPanelService.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanelService.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelServiceMouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -143,9 +149,16 @@ public class HPMenuBrand extends javax.swing.JFrame {
 
     private void jPanelItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelItemMouseClicked
         // TODO add your handling code here:
-        new ControllerAddTickets();
         this.dispose();
+        new ControllerAddTickets();
+        
     }//GEN-LAST:event_jPanelItemMouseClicked
+
+    private void jPanelServiceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelServiceMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+        new ControllerAddService();
+    }//GEN-LAST:event_jPanelServiceMouseClicked
 
     /**
      * @param args the command line arguments

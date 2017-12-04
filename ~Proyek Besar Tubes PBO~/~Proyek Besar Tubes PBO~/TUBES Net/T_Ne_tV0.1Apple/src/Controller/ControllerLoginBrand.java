@@ -40,9 +40,10 @@ public class ControllerLoginBrand implements ActionListener {
             try {
                 if (model.cekLogin(user, pass,"brand")!=null) {
                     hp = new HPMenuBrand();
+                    hp.getjTextAreaName(user);
                     hp.setVisible(true);
                     hp.setLocationRelativeTo(null);
-                    
+                    loginBrand.setVisible(false);
                     //hpMenuCustomers.addlistener(this);
                     
                 }else if (model.cekLogin(user, pass,"admin")!=null){

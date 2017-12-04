@@ -5,6 +5,9 @@
  */
 package View;
 
+import Controller.ControllerAddItem;
+import Controller.ControllerAddService;
+
 /**
  *
  * @author User
@@ -47,6 +50,11 @@ public class HPMenuSeller extends javax.swing.JFrame {
 
         jPanelService.setBackground(new java.awt.Color(135, 191, 255));
         jPanelService.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanelService.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelServiceMouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -73,6 +81,11 @@ public class HPMenuSeller extends javax.swing.JFrame {
 
         jPanelItem.setBackground(new java.awt.Color(135, 191, 255));
         jPanelItem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanelItem.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelItemMouseClicked(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -134,6 +147,18 @@ public class HPMenuSeller extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPanelServiceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelServiceMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+        new ControllerAddService();
+    }//GEN-LAST:event_jPanelServiceMouseClicked
+
+    private void jPanelItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelItemMouseClicked
+        // TODO add your handling code here:\this.dispose();
+        this.dispose();
+        new ControllerAddItem();
+    }//GEN-LAST:event_jPanelItemMouseClicked
 
     /**
      * @param args the command line arguments
