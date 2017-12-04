@@ -35,13 +35,13 @@ public class AddItem extends javax.swing.JFrame {
         PasswordInter1 = new javax.swing.JLabel();
         RegName1 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBoxtipe = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         PasswordInter = new javax.swing.JLabel();
-        RegName = new javax.swing.JTextField();
+        Harga = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        SignUp = new javax.swing.JButton();
+        add = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         email = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -83,9 +83,9 @@ public class AddItem extends javax.swing.JFrame {
 
         jPanelRight.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 300, 5));
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanelRight.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 140, -1));
+        jComboBoxtipe.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBoxtipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fashion", "Furniture", "Food" }));
+        jPanelRight.add(jComboBoxtipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 140, -1));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
@@ -112,17 +112,17 @@ public class AddItem extends javax.swing.JFrame {
         PasswordInter.setText("Harga :");
         jPanelRight.add(PasswordInter, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
 
-        RegName.setBackground(new java.awt.Color(135, 191, 255));
-        RegName.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        RegName.setForeground(new java.awt.Color(255, 255, 255));
-        RegName.setBorder(null);
-        RegName.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        RegName.addActionListener(new java.awt.event.ActionListener() {
+        Harga.setBackground(new java.awt.Color(135, 191, 255));
+        Harga.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        Harga.setForeground(new java.awt.Color(255, 255, 255));
+        Harga.setBorder(null);
+        Harga.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        Harga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegNameActionPerformed(evt);
+                HargaActionPerformed(evt);
             }
         });
-        jPanelRight.add(RegName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 300, -1));
+        jPanelRight.add(Harga, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 300, -1));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -137,16 +137,16 @@ public class AddItem extends javax.swing.JFrame {
 
         jPanelRight.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 300, 5));
 
-        SignUp.setBackground(new java.awt.Color(173, 215, 246));
-        SignUp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        SignUp.setForeground(new java.awt.Color(255, 255, 255));
-        SignUp.setText("Sign Up");
-        SignUp.addActionListener(new java.awt.event.ActionListener() {
+        add.setBackground(new java.awt.Color(173, 215, 246));
+        add.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        add.setForeground(new java.awt.Color(255, 255, 255));
+        add.setText("Add");
+        add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SignUpActionPerformed(evt);
+                addActionPerformed(evt);
             }
         });
-        jPanelRight.add(SignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 100, 40));
+        jPanelRight.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 100, 40));
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -171,13 +171,13 @@ public class AddItem extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_RegName1ActionPerformed
 
-    private void RegNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegNameActionPerformed
+    private void HargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HargaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RegNameActionPerformed
+    }//GEN-LAST:event_HargaActionPerformed
 
-    private void SignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpActionPerformed
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SignUpActionPerformed
+    }//GEN-LAST:event_addActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,13 +216,13 @@ public class AddItem extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Harga;
     private javax.swing.JLabel PasswordInter;
     private javax.swing.JLabel PasswordInter1;
-    private javax.swing.JTextField RegName;
     private javax.swing.JTextField RegName1;
-    private javax.swing.JButton SignUp;
+    private javax.swing.JButton add;
     private javax.swing.JPanel email;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBoxtipe;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -234,7 +234,37 @@ public class AddItem extends javax.swing.JFrame {
     private javax.swing.JSlider jSlider1;
     // End of variables declaration//GEN-END:variables
 
-    
+    /**
+     * @return the Harga
+     */
+    public javax.swing.JTextField getHarga() {
+        return Harga;
+    }
+
+    /**
+     * @return the RegName1
+     */
+    public javax.swing.JTextField getRegName1() {
+        return RegName1;
+    }
+
+    /**
+     * @return the add
+     */
+    public javax.swing.JButton getAdd() {
+        return add;
+    }
+
+    /**
+     * @return the jComboBoxtipe
+     */
+    public javax.swing.JComboBox<String> getjComboBoxtipe() {
+        return jComboBoxtipe;
+    }
+
+  public void addlistener(ActionListener a){
+        add.addActionListener(a);
+    }  
 
 
 }

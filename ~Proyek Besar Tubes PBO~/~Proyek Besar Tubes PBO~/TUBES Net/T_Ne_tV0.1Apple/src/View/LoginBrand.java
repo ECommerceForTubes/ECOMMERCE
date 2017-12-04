@@ -5,6 +5,7 @@
  */
 package View;
 
+import Controller.ControllerSignUpBrand;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
@@ -178,12 +179,8 @@ public class LoginBrand extends javax.swing.JFrame {
 
     private void jLabelSingUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSingUpMouseClicked
         // TODO add your handling code here:
-        SignUpBrand singUpCus = new SignUpBrand();
-        singUpCus.setVisible(true);
-        singUpCus.pack();
-        singUpCus.setLocationRelativeTo(null);
-        singUpCus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.dispose();
+        new ControllerSignUpBrand();
+        this.dispose();  
     }//GEN-LAST:event_jLabelSingUpMouseClicked
 
     private void jButtonLoginBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginBActionPerformed

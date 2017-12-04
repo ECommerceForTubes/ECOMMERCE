@@ -303,17 +303,60 @@ public class SignUpCustomer extends javax.swing.JFrame {
     private javax.swing.JLabel signup;
     // End of variables declaration//GEN-END:variables
 
-
+    /**
+     * @return the RegAddress
+     */
     public javax.swing.JTextField getRegAddress() {
         return RegAddress;
     }
 
+    /**
+     * @param RegAddress the RegAddress to set
+     */
+    public void setRegAddress(javax.swing.JTextField RegAddress) {
+        this.RegAddress = RegAddress;
+    }
+
+    /**
+     * @return the RegName
+     */
     public javax.swing.JTextField getRegName() {
         return RegName;
     }
-    
+
+    /**
+     * @param RegName the RegName to set
+     */
+    public void setRegName(javax.swing.JTextField RegName) {
+        this.RegName = RegName;
+    }
+
+    /**
+     * @return the RegPassword
+     */
     public javax.swing.JPasswordField getRegPassword() {
         return RegPassword;
+    }
+
+    /**
+     * @param RegPassword the RegPassword to set
+     */
+    public void setRegPassword(javax.swing.JPasswordField RegPassword) {
+        this.RegPassword = RegPassword;
+    }
+
+    /**
+     * @return the Regemail
+     */
+    public javax.swing.JTextField getRegemail() {
+        return Regemail;
+    }
+
+    /**
+     * @param Regemail the Regemail to set
+     */
+    public void setRegemail(javax.swing.JTextField Regemail) {
+        this.Regemail = Regemail;
     }
 
     /**
@@ -323,12 +366,16 @@ public class SignUpCustomer extends javax.swing.JFrame {
         return SignUp;
     }
 
-    public void addlistener(ActionListener a){
-        SignUp.addActionListener(a);
+    /**
+     * @param SignUp the SignUp to set
+     */
+    public void setSignUp(javax.swing.JButton SignUp) {
+        this.SignUp = SignUp;
     }
 
-    public javax.swing.JTextField getRegemail() {
-        return Regemail;
+
+    public void addlistener(ActionListener e){
+        SignUp.addActionListener(e);
     }
     
 

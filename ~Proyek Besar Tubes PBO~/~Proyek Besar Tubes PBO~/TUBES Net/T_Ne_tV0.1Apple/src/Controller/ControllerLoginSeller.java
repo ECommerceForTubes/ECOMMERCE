@@ -10,6 +10,7 @@ import View.LoginSeller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author Dimas
@@ -33,13 +34,15 @@ public class ControllerLoginSeller implements ActionListener {
         if (a == loginSeller.getjButtonLogins()) {
             String user = loginSeller.getIn_username().getText();
             String pass = loginSeller.getjPasswordField1().getText();
-            System.out.println(user + pass);
+            //System.out.println(user + pass);
 
             try{
                 if (model.cekLogin(user, pass, "seller")!=null){
                     hp = new HPMenuSeller();
+                    hp.getjTextAreaNamef(user);
                     hp.setVisible(true);
                     hp.setLocationRelativeTo(null);
+                    loginSeller.setVisible(false);
                 }else if(model.cekLogin(user, pass, "admin")!=null){
                     System.out.println("SUKSES ADMIN BROO");//<<<<<DIGANTI HOMEPAGE
                 }else{

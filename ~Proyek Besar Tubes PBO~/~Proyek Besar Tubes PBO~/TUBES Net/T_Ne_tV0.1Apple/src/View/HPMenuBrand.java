@@ -5,6 +5,8 @@
  */
 package View;
 
+import Controller.ControllerAddTickets;
+
 /**
  *
  * @author User
@@ -37,6 +39,7 @@ public class HPMenuBrand extends javax.swing.JFrame {
         email = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jTextAreaName = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -45,6 +48,7 @@ public class HPMenuBrand extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelService.setBackground(new java.awt.Color(135, 191, 255));
+        jPanelService.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,6 +74,12 @@ public class HPMenuBrand extends javax.swing.JFrame {
         jPanel1.add(jPanelService, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 190, 70));
 
         jPanelItem.setBackground(new java.awt.Color(135, 191, 255));
+        jPanelItem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanelItem.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelItemMouseClicked(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,9 +90,9 @@ public class HPMenuBrand extends javax.swing.JFrame {
         jPanelItemLayout.setHorizontalGroup(
             jPanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelItemLayout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addComponent(jLabel5)
-                .addGap(25, 25, 25))
+                .addGap(29, 29, 29))
         );
         jPanelItemLayout.setVerticalGroup(
             jPanelItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,12 +127,26 @@ public class HPMenuBrand extends javax.swing.JFrame {
         jLabel7.setText("Name :");
         email.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
+        jTextAreaName.setBackground(new java.awt.Color(135, 191, 255));
+        jTextAreaName.setColumns(20);
+        jTextAreaName.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jTextAreaName.setForeground(new java.awt.Color(255, 255, 255));
+        jTextAreaName.setRows(5);
+        email.add(jTextAreaName, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 180, 20));
+
         jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 490));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPanelItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelItemMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+        new ControllerAddTickets();
+        
+    }//GEN-LAST:event_jPanelItemMouseClicked
 
     /**
      * @param args the command line arguments
@@ -170,5 +194,12 @@ public class HPMenuBrand extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelItem;
     private javax.swing.JPanel jPanelService;
+    private javax.swing.JTextArea jTextAreaName;
     // End of variables declaration//GEN-END:variables
+    
+    public void getjTextAreaName(String user) {
+        jTextAreaName.append(user);
+    }
+
+
 }

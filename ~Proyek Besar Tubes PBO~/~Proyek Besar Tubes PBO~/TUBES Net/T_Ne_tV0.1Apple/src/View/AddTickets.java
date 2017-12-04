@@ -37,9 +37,9 @@ public class AddTickets extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         PasswordInter = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        SignUp = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        RegName = new javax.swing.JTextField();
+        add = new javax.swing.JButton();
+        jComboBoxtipe = new javax.swing.JComboBox<>();
+        harga = new javax.swing.JTextField();
         email = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -93,32 +93,37 @@ public class AddTickets extends javax.swing.JFrame {
 
         jPanelRight.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 300, 5));
 
-        SignUp.setBackground(new java.awt.Color(173, 215, 246));
-        SignUp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        SignUp.setForeground(new java.awt.Color(255, 255, 255));
-        SignUp.setText("Sign Up");
-        SignUp.addActionListener(new java.awt.event.ActionListener() {
+        add.setBackground(new java.awt.Color(173, 215, 246));
+        add.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        add.setForeground(new java.awt.Color(255, 255, 255));
+        add.setText("Add");
+        add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SignUpActionPerformed(evt);
+                addActionPerformed(evt);
             }
         });
-        jPanelRight.add(SignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 100, 40));
+        jPanelRight.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 100, 40));
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanelRight.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 140, -1));
-
-        RegName.setBackground(new java.awt.Color(135, 191, 255));
-        RegName.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        RegName.setForeground(new java.awt.Color(255, 255, 255));
-        RegName.setBorder(null);
-        RegName.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        RegName.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxtipe.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+        jComboBoxtipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tiket Kereta", "Tiket Pesawat", "Tiket Bus" }));
+        jComboBoxtipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegNameActionPerformed(evt);
+                jComboBoxtipeActionPerformed(evt);
             }
         });
-        jPanelRight.add(RegName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 300, -1));
+        jPanelRight.add(jComboBoxtipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 140, -1));
+
+        harga.setBackground(new java.awt.Color(135, 191, 255));
+        harga.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        harga.setForeground(new java.awt.Color(255, 255, 255));
+        harga.setBorder(null);
+        harga.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        harga.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hargaActionPerformed(evt);
+            }
+        });
+        jPanelRight.add(harga, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 300, -1));
 
         getContentPane().add(jPanelRight, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 510, 500));
 
@@ -134,13 +139,17 @@ public class AddTickets extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpActionPerformed
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SignUpActionPerformed
+    }//GEN-LAST:event_addActionPerformed
 
-    private void RegNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegNameActionPerformed
+    private void hargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RegNameActionPerformed
+    }//GEN-LAST:event_hargaActionPerformed
+
+    private void jComboBoxtipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxtipeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxtipeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,10 +189,10 @@ public class AddTickets extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel PasswordInter;
-    private javax.swing.JTextField RegName;
-    private javax.swing.JButton SignUp;
+    private javax.swing.JButton add;
     private javax.swing.JPanel email;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JTextField harga;
+    private javax.swing.JComboBox<String> jComboBoxtipe;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -194,7 +203,30 @@ public class AddTickets extends javax.swing.JFrame {
     private javax.swing.JSlider jSlider1;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * @return the add
+     */
+    public javax.swing.JButton getAdd() {
+        return add;
+    }
 
+    /**
+     * @return the harga
+     */
+    public javax.swing.JTextField getHarga() {
+        return harga;
+    }
+
+    /**
+     * @return the jComboBoxtipe
+     */
+    public javax.swing.JComboBox<String> getjComboBoxtipe() {
+        return jComboBoxtipe;
+    }
+
+    public void addlistener(ActionListener a){
+        add.addActionListener(a);
+    } 
 
 
 }

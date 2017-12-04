@@ -14,13 +14,11 @@ public class Item {
     private String item_code;
     private String category;
     private double price;    
-    private int    stock;
 
-    public Item(String item_code, String description, String category, double price, int stock) {
+    public Item(String item_code, String category, double price) {
         this.item_code   = item_code;
         this.category    = category;
         this.price       = price;
-        this.stock       = stock;
     }
     
 
@@ -47,14 +45,5 @@ public class Item {
     public double getPrice() {
         return price;
     }
-
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
-
-    public int getStock() {
-        return stock;
-    }
-    
 //>>-----------------------------        
 }
