@@ -134,6 +134,7 @@ public class HPMenuSeller extends javax.swing.JFrame {
         jLabel7.setText("Name :");
         email.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
+        aname.setEditable(false);
         aname.setBackground(new java.awt.Color(135, 191, 255));
         aname.setColumns(20);
         aname.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N

@@ -147,6 +147,39 @@ public class Database {
         return st;
     }
     
+     public Seller getSeller(String id){
+         Seller sel=null;
+         try {
+            String query = "select * from seller where idseller= '" + id + "'";
+            ResultSet rs = statement.executeQuery(query);
+            if (rs.next()) {
+                sel = new Seller(rs.getString(2),rs.getString(3), rs.getString(4),rs.getString(5));
+            }
+            return sel;
+        } catch (Exception e) {
+           JOptionPane.showConfirmDialog(null, "eror get status", "Eror get status", JOptionPane.WARNING_MESSAGE);
+
+        }
+        return sel;
+     }
+     
+     public Brand getBrand(String id){
+         Brand sel=null;
+         try {
+            String query = "select * from brand where idbrand= '" + id + "'";
+            ResultSet rs = statement.executeQuery(query);
+            if (rs.next()) {
+                sel = new Brand(rs.getString(2),rs.getString(3), rs.getString(4),rs.getString(5));
+            }
+            return sel;
+        } catch (Exception e) {
+           JOptionPane.showConfirmDialog(null, "eror get status", "Eror get status", JOptionPane.WARNING_MESSAGE);
+
+        }
+        return sel;
+     }
+     
+    
     public Item getItem(String nama) {
         Item st = null ;
         try {
@@ -180,7 +213,23 @@ public class Database {
     public String cekPemilik(String pemilik, String Item){
         String st = null;
         try {
-            String query = "select * from item where idowner='"+ pemilik + "' AND nama='"+Item+"'";
+            String query = "select * from item where idseller='"+ pemilik + "' AND nama='"+Item+"'";
+            ResultSet rs = statement.executeQuery(query);
+            if (rs.next()) {
+                st = rs.getString(1);                
+            }
+            return st;
+        } catch (Exception e) {
+           JOptionPane.showConfirmDialog(null, "error get status", "Error get status", JOptionPane.WARNING_MESSAGE);
+
+        }
+        return st;
+    }
+    
+    public String cekowner(String pemilik, String Item){
+        String st = null;
+        try {
+            String query = "select * from service where idowner='"+ pemilik + "' AND nama='"+Item+"'";
             ResultSet rs = statement.executeQuery(query);
             if (rs.next()) {
                 st = rs.getString(1);                
@@ -202,10 +251,18 @@ public class Database {
         }
     }
     
-    
-    public void Deleteuser(String email, String status) {
+    public void DeleteService(String nama){
         try {
-            String query1 = "Delete from "+ status +" where email='" + email + "'";
+            String query1 = "Delete from service where nama='" + nama + "'";
+            statement.execute(query1);
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, "Data Tidak Ada", "Data Terhapus", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+  
+    public void Deleteuser(String id, String status) {
+        try {
+            String query1 = "Delete from "+ status +" where id"+status+"='" + id + "'";
             statement.execute(query1);
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "Data Tidak Ada", "Data Terhapus", JOptionPane.WARNING_MESSAGE);
@@ -257,7 +314,7 @@ public class Database {
     public ArrayList<Item> loadItemSel(String idseller){
         try {
             ArrayList<Item> dftitem = new ArrayList();
-            String query = "select * from brand where idseller='"+idseller+"'";
+            String query = "select * from item where idseller='"+idseller+"'";
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()){
                 Item a = new Item(rs.getString(2), rs.getString(3), rs.getDouble(4));
@@ -285,7 +342,7 @@ public class Database {
     public ArrayList<Services> loadSrv(String idowner){
         try {
             ArrayList<Services> dft = new ArrayList();
-            String query = "select * from ticket where idbrand='"+idowner+"'";
+            String query = "select * from service where idbrand='"+idowner+"'";
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()){
                 Services a = new Services(rs.getString(1),rs.getString(2),rs.getString(3), rs.getDouble(4));

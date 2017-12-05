@@ -3,29 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/ControllerLoginBrand.java</file>
             <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/ListProduct.java</file>
-            <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/ControllerSignUpCustomers.java</file>
-            <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Item.java</file>
+            <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/AddItem.java</file>
+            <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/HPMenuSeller.java</file>
+            <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/ControllerHPMenuCustomers.java</file>
             <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/Aplikasi.java</file>
+            <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/ControllerAddItem.java</file>
+            <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/DeleteProduct.java</file>
             <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/ControllerLoginCustomer.java</file>
+            <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/ControllerDeleteProduct.java</file>
             <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Database.java</file>
             <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Driver/Driver.java</file>
             <file>file:/D:/Data%20Penting/Telkom%20University/Semester%203/Object%20Oriented%20Programming/Project/Tubes/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/ControllerLoginSeller.java</file>
-=======
-            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/HPMenuBrand.java</file>
-            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/ControllerSignUpBrand.java</file>
-            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/Beranda.java</file>
-            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/ControllerAddTickets.java</file>
-            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/Aplikasi.java</file>
-            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/LoginBrand.java</file>
-            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/model/Database.java</file>
-            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/HPMenuSeller.java</file>
-            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/View/AddTickets.java</file>
-            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/ControllerSignUpCustomers.java</file>
-            <file>file:/D:/1.%20%20%20%20%20KULIAH/semester%203/PBO/Tubes%20PBO/ECOMMERCE/~Proyek%20Besar%20Tubes%20PBO~/~Proyek%20Besar%20Tubes%20PBO~/TUBES%20Net/T_Ne_tV0.1Apple/src/Controller/ControllerSignUpSeller.java</file>
->>>>>>> ffa4c43ed40c0b1b6c797b57ada29f55ed73b37d
         </group>
     </open-files>
 </project-private>

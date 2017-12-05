@@ -228,6 +228,7 @@
             </Component>
             <Component class="javax.swing.JTextArea" name="aname">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="bf" red="87" type="rgb"/>
                 </Property>

@@ -371,7 +371,9 @@ public class DeleteProduct extends javax.swing.JFrame {
     public javax.swing.JTextField getDelKateItem() {
         return DelKateItem;
     }
-
+    public String getTfKodeuser(){
+        return DelNamaItem.getText();
+    }
     /**
      * @return the DelNamaItem
      */

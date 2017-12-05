@@ -10,6 +10,7 @@ import View.LoginSeller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import model.Seller;
 
 /**
  *
@@ -19,6 +20,7 @@ public class ControllerLoginSeller implements ActionListener {
     LoginSeller loginSeller;
     HPMenuSeller hp;
     Aplikasi model;
+    Seller user1;
     
     public ControllerLoginSeller() {
         loginSeller = new LoginSeller();
@@ -39,6 +41,7 @@ public class ControllerLoginSeller implements ActionListener {
             try{
                 if (model.cekLogin(user, pass, "seller")!=null){
                     hp = new HPMenuSeller();
+                    model.setSesionSeller(user1);
                     hp.getjTextAreaNamef(user);
                     hp.setVisible(true);
                     hp.setLocationRelativeTo(null);
