@@ -94,10 +94,10 @@ public class Database {
         }
     }
 
-    public void saveservice(Services s) {
+    public void saveservice(Services s,String idseller) {
         try {
-            String query1 = "insert into courier(idcourier, courier_name, price) values"
-                    + "('" + s.getidowner() + "', "
+            String query1 = "INSERT INTO `service`(`idowner`, `nama`, `type_service`, `price`) VALUES"
+                    + "('" + idseller+ "', "
                     + "'" + s.getnama() + "', "
                     + "'" + s.getType_service() + "', "
                     + "'" + s.getPrice() +  "')";
@@ -121,7 +121,7 @@ public class Database {
 
     public void savetiket(Tickets s, String idbrand) {
         try {
-            String query1 = "INSERT INTO `tiket`(`idbrand`, `type_ticket`, `price`) VALUES"
+            String query1 = "INSERT INTO `ticket`(`idbrand`, `type_ticket`, `price`) VALUES "
                     + "('" +idbrand+ "', "
                     + "'" + s.getTickets_type() + "', "
                     + "'" + s.getPrice()+ "')";
@@ -223,22 +223,10 @@ public class Database {
             }return daftarCust;
         } catch (Exception e) {
             throw new IllegalArgumentException("terjadi kesalahan saat load Customer");
-<<<<<<< HEAD
         }
     }
     
-    public ArrayList<Seller> loadSell(){
-        try {
-            ArrayList<Seller> daftarSeller = new ArrayList();
-            String query = "select * from Seller";
-            ResultSet rs = statement.executeQuery(query);
-            while (rs.next()){
-                Seller a = new Seller(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
-                daftarSeller.add(a);
-            }return daftarSeller;
-=======
-        }
-    }
+
     
     public ArrayList<Seller> loadSell(){
         try {
@@ -271,7 +259,7 @@ public class Database {
     public ArrayList<Item> loadItemSel(String idseller){
         try {
             ArrayList<Item> dftitem = new ArrayList();
-            String query = "select * from brand where idseller='"+idseller+"'";
+            String query = "SELECT * FROM `item` WHERE idseller ='"+idseller+"'";
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()){
                 Item a = new Item(rs.getString(2), rs.getString(3), rs.getDouble(4));
@@ -291,7 +279,6 @@ public class Database {
                 Tickets a = new Tickets(rs.getString(2), rs.getDouble(3));
                 dft.add(a);
             }return dft;
->>>>>>> 8cf8351dbdb77327f8737869035bc871a09a0497
         } catch (Exception e) {
             throw new IllegalArgumentException("terjadi kesalahan saat load Customer");
         }

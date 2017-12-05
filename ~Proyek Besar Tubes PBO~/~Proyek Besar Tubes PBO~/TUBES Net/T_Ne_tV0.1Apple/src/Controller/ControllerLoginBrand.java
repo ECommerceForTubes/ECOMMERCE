@@ -8,6 +8,7 @@ package Controller;
 import View.LoginBrand;
 import View.LoginCustomer;
 import View.HPMenuBrand;
+import View.ListProduct;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -20,6 +21,8 @@ public class ControllerLoginBrand implements ActionListener {
     LoginBrand loginBrand;
     HPMenuBrand hp;
     Aplikasi model;
+    ListProduct view;
+    
 
     public ControllerLoginBrand() {
         loginBrand = new LoginBrand();
@@ -40,8 +43,10 @@ public class ControllerLoginBrand implements ActionListener {
             try {
                 if (model.cekLogin(user, pass,"brand")!=null) {
                     hp = new HPMenuBrand();
+                    hp.getjTextAreaName(user);
                     hp.setVisible(true);
                     hp.setLocationRelativeTo(null);
+                    loginBrand.setVisible(false);
                     
                     //hpMenuCustomers.addlistener(this);
                     

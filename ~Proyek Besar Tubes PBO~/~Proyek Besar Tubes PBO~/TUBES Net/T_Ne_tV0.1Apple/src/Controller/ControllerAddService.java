@@ -16,14 +16,16 @@ import java.awt.event.ActionListener;
 public class ControllerAddService implements ActionListener{
     AddService addService;
     Aplikasi model;
+    String user;
 //    HPMenuCustomers hpMenuCustomers; view selanjutnya
     
-    public ControllerAddService() {
+    public ControllerAddService(String user) {
         addService= new AddService();
         model = new Aplikasi();
         addService.setVisible(true);
         addService.setLocationRelativeTo(null);
         addService.addlistener(this);
+        this.user = user;
     }
     
     @Override
@@ -31,31 +33,10 @@ public class ControllerAddService implements ActionListener{
         Object a = e.getSource();
         if (a == addService.getAdd()) {
             String nama = addService.getRegName1().getText();
-            String harga = addService.getRegHarga().getText();
+            Double harga =  Double.parseDouble(addService.getRegHarga().getText());
             String tipe = addService.getTipe().getSelectedItem().toString();
-            System.out.println(harga+" "+tipe);
-
-            
-//            try {
-//                if (model.cekLogin(email, pass,"customer")==null) {
-//                    model = new Aplikasi();
-//                    model.tambahcust(user, pass, addrs, email);
-//                    new ControllerHPMenuCustomers(email);
-//                    signUpCustomer.setVisible(false);
-//
-//                
-//                }else {
-//                    JOptionPane.showConfirmDialog(signUpCustomer, "Anda sudah terdaftar", "Login Gagal", JOptionPane.WARNING_MESSAGE);
-//                    Beranda beranda = new Beranda();
-//                    beranda.setVisible(true);
-//                    beranda.setLocationRelativeTo(null);
-//                    signUpCustomer.setVisible(false);
-//                }
-//
-//            } catch (Exception ee) {
-//                 ee.printStackTrace();//penting
-//               JOptionPane.showConfirmDialog(signUpCustomer, ""+ee.getMessage(), ""+ee.getMessage(), JOptionPane.WARNING_MESSAGE);
-//            }
+//            System.out.println(harga+" "+tipe);
+            model.tambahService(nama, tipe, harga, user);
         }
     }    
 }

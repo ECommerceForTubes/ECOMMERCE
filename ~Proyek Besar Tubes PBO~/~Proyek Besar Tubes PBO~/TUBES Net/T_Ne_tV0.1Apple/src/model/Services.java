@@ -22,6 +22,11 @@ public class Services {
         this.type_service = type_service;
         this.price = price;
     }
+    public Services(String nama, String type_service, double price) {
+        this.nama = nama;
+        this.type_service = type_service;
+        this.price = price;
+    }
 
     public void setidowner(String idowner) {
         this.idowner = idowner;
