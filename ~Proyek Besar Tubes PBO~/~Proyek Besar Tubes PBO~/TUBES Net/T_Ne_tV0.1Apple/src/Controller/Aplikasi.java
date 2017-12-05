@@ -107,6 +107,9 @@ public class Aplikasi {
         }
         
     }
+    public void Clear(){
+        db.ClearALL();
+    }
 //   	public void deleteSeller()   
 
 }

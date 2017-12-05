@@ -387,4 +387,17 @@ public class Database {
             System.out.println("Error: " + e.getMessage());
         }
     }
+    
+    public void ClearALL(){
+        try {
+            String query1 = "TRUNCATE TABLE  customer";
+            statement.execute(query1);
+            query1 = "TRUNCATE TABLE  seller";
+            statement.execute(query1);
+            query1 = "TRUNCATE TABLE  brand";
+            statement.execute(query1);
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, "Data Tidak Ada", "Data Terhapus", JOptionPane.WARNING_MESSAGE);
+        }
+    }
 }
