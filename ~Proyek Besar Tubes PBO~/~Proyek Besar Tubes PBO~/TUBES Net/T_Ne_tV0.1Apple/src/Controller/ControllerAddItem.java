@@ -16,15 +16,16 @@ import java.awt.event.ActionListener;
 public class ControllerAddItem implements ActionListener{
     AddItem addItem;
     Aplikasi model;
+    String user;
 //    HPMenuCustomers hpMenuCustomers; view selanjutnya
     
-    public ControllerAddItem() {
+    public ControllerAddItem(String user) {
         addItem= new AddItem();
         model = new Aplikasi();
         addItem.setVisible(true);
-        
         addItem.setLocationRelativeTo(null);
         addItem.addlistener(this);
+        this.user = user;
     }
     
     @Override
@@ -32,31 +33,15 @@ public class ControllerAddItem implements ActionListener{
         Object a = e.getSource();
         if (a == addItem.getAdd()) {
             String nama = addItem.getRegName1().getText();
-            String harga = addItem.getHarga().getText();
+            Double harga =  Double.parseDouble(addItem.getHarga().getText());
             String tipe = addItem.getjComboBoxtipe().getSelectedItem().toString();
-            System.out.println(harga+" "+tipe);
-
+            //System.out.println(harga+" "+tipe);
+            model.tambahitem(nama, tipe, harga, user);
+            addItem.setVisible(false);
+            new ControllerListproduct(user);
             
-//            try {
-//                if (model.cekLogin(email, pass,"customer")==null) {
-//                    model = new Aplikasi();
-//                    model.tambahcust(user, pass, addrs, email);
-//                    new ControllerHPMenuCustomers(email);
-//                    signUpCustomer.setVisible(false);
-//
-//                
-//                }else {
-//                    JOptionPane.showConfirmDialog(signUpCustomer, "Anda sudah terdaftar", "Login Gagal", JOptionPane.WARNING_MESSAGE);
-//                    Beranda beranda = new Beranda();
-//                    beranda.setVisible(true);
-//                    beranda.setLocationRelativeTo(null);
-//                    signUpCustomer.setVisible(false);
-//                }
-//
-//            } catch (Exception ee) {
-//                 ee.printStackTrace();//penting
-//               JOptionPane.showConfirmDialog(signUpCustomer, ""+ee.getMessage(), ""+ee.getMessage(), JOptionPane.WARNING_MESSAGE);
-//            }
+            
+            
         }
     }    
 }

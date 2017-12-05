@@ -94,10 +94,10 @@ public class Database {
         }
     }
 
-    public void saveservice(Services s) {
+    public void saveservice(Services s,String idseller) {
         try {
-            String query1 = "insert into courier(idcourier, courier_name, price) values"
-                    + "('" + s.getidowner() + "', "
+            String query1 = "INSERT INTO `service`(`idowner`, `nama`, `type_service`, `price`) VALUES"
+                    + "('" + idseller+ "', "
                     + "'" + s.getnama() + "', "
                     + "'" + s.getType_service() + "', "
                     + "'" + s.getPrice() +  "')";
@@ -121,7 +121,7 @@ public class Database {
 
     public void savetiket(Tickets s, String idbrand) {
         try {
-            String query1 = "INSERT INTO `tiket`(`idbrand`, `type_ticket`, `price`) VALUES"
+            String query1 = "INSERT INTO `ticket`(`idbrand`, `type_ticket`, `price`) VALUES "
                     + "('" +idbrand+ "', "
                     + "'" + s.getTickets_type() + "', "
                     + "'" + s.getPrice()+ "')";
@@ -283,6 +283,8 @@ public class Database {
         }
     }
     
+
+    
     public ArrayList<Seller> loadSell(){
         try {
             ArrayList<Seller> daftarSeller = new ArrayList();
@@ -314,7 +316,11 @@ public class Database {
     public ArrayList<Item> loadItemSel(String idseller){
         try {
             ArrayList<Item> dftitem = new ArrayList();
+<<<<<<< HEAD
             String query = "select * from item where idseller='"+idseller+"'";
+=======
+            String query = "SELECT * FROM `item` WHERE idseller ='"+idseller+"'";
+>>>>>>> aa7b718f5e2c3870a1b6e94f26aadc6db6e23f79
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()){
                 Item a = new Item(rs.getString(2), rs.getString(3), rs.getDouble(4));

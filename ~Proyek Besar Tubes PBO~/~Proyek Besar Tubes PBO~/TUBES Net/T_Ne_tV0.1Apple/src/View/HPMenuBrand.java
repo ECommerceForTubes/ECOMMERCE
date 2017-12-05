@@ -13,6 +13,7 @@ import Controller.ControllerAddTickets;
  * @author User
  */
 public class HPMenuBrand extends javax.swing.JFrame {
+    String userr;
 
     /**
      * Creates new form HPMenuSeller
@@ -149,14 +150,14 @@ public class HPMenuBrand extends javax.swing.JFrame {
 
     private void jPanelItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelItemMouseClicked
         // TODO add your handling code here:
-        new ControllerAddTickets();
+        new ControllerAddTickets(userr);
         this.dispose();
     }//GEN-LAST:event_jPanelItemMouseClicked
 
     private void jPanelServiceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelServiceMouseClicked
         // TODO add your handling code here:
+        new ControllerAddService(userr);
         this.dispose();
-        new ControllerAddService();
     }//GEN-LAST:event_jPanelServiceMouseClicked
 
     /**
@@ -210,6 +211,7 @@ public class HPMenuBrand extends javax.swing.JFrame {
     
     public void getjTextAreaName(String user) {
         jTextAreaName.append(user);
+        userr = user;
     }
 
 

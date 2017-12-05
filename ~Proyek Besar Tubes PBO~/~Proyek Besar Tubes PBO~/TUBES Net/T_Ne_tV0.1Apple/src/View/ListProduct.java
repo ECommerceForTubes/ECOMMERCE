@@ -5,6 +5,9 @@
  */
 package View;
 
+import java.util.ArrayList;
+import model.Item;
+
 /**
  *
  * @author User
@@ -34,8 +37,8 @@ public class ListProduct extends javax.swing.JFrame {
         aname = new javax.swing.JTextArea();
         nametextfild = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        in_username = new javax.swing.JTextField();
-        BSearch = new javax.swing.JButton();
+        textSerch = new javax.swing.JTextField();
+        sreach = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TProduct = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
@@ -75,10 +78,10 @@ public class ListProduct extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/loupe.png"))); // NOI18N
         jLabel3.setText("jLabel3");
 
-        in_username.setBackground(new java.awt.Color(173, 215, 246));
-        in_username.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        in_username.setForeground(new java.awt.Color(255, 255, 255));
-        in_username.setBorder(null);
+        textSerch.setBackground(new java.awt.Color(173, 215, 246));
+        textSerch.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        textSerch.setForeground(new java.awt.Color(255, 255, 255));
+        textSerch.setBorder(null);
 
         javax.swing.GroupLayout nametextfildLayout = new javax.swing.GroupLayout(nametextfild);
         nametextfild.setLayout(nametextfildLayout);
@@ -88,7 +91,7 @@ public class ListProduct extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(in_username, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textSerch, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         nametextfildLayout.setVerticalGroup(
@@ -96,25 +99,72 @@ public class ListProduct extends javax.swing.JFrame {
             .addGroup(nametextfildLayout.createSequentialGroup()
                 .addGroup(nametextfildLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(in_username, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textSerch, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel1.add(nametextfild, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 410, 50));
 
-        BSearch.setBackground(new java.awt.Color(135, 191, 255));
-        BSearch.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        BSearch.setForeground(new java.awt.Color(255, 255, 255));
-        BSearch.setText("Search");
-        BSearch.addActionListener(new java.awt.event.ActionListener() {
+        sreach.setBackground(new java.awt.Color(135, 191, 255));
+        sreach.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+        sreach.setForeground(new java.awt.Color(255, 255, 255));
+        sreach.setText("Search");
+        sreach.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BSearchActionPerformed(evt);
+                sreachActionPerformed(evt);
             }
         });
-        jPanel1.add(BSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, 90, 50));
+        jPanel1.add(sreach, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, 90, 50));
 
         TProduct.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
@@ -138,9 +188,9 @@ public class ListProduct extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BSearchActionPerformed
+    private void sreachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sreachActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BSearchActionPerformed
+    }//GEN-LAST:event_sreachActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,11 +228,9 @@ public class ListProduct extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BSearch;
     private javax.swing.JTable TProduct;
     private javax.swing.JTextArea aname;
     private javax.swing.JPanel email;
-    private javax.swing.JTextField in_username;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
@@ -190,5 +238,46 @@ public class ListProduct extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel nametextfild;
+    private javax.swing.JButton sreach;
+    private javax.swing.JTextField textSerch;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the TProduct
+     */
+    
+    public void setData(ArrayList<Item> item){
+        for (int j = 0; j < item.size(); j++) {
+            TProduct.setValueAt(item.get(j).getCode_item(), j, 0);
+            TProduct.setValueAt(item.get(j).getCategory(), j, 1);
+            TProduct.setValueAt(item.get(j).getPrice(), j, 2);
+        }
+    }
+    public javax.swing.JTable getTProduct() {
+        return TProduct;
+    }
+
+    /**
+     * @return the aname
+     */
+    public javax.swing.JTextArea getAname() {
+        return aname;
+    }
+
+    /**
+     * @return the sreach
+     */
+    public javax.swing.JButton getSreach() {
+        return sreach;
+    }
+
+    /**
+     * @return the textSerch
+     */
+    public javax.swing.JTextField getTextSerch() {
+        return textSerch;
+    }
+    
+
+
 }

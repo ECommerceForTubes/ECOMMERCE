@@ -17,24 +17,30 @@ import javax.swing.JOptionPane;
 public class ControllerAddTickets implements ActionListener{
     AddTickets addTiket;
     Aplikasi model;
+    String user;
+    
 //    HPMenuCustomers hpMenuCustomers; view selanjutnya
     
-    public ControllerAddTickets() {
+    public ControllerAddTickets(String user) {
         addTiket= new AddTickets();
         model = new Aplikasi();
         addTiket.setVisible(true);
-        
         addTiket.setLocationRelativeTo(null);
         addTiket.addlistener(this);
+        this.user = user;
     }
     
         @Override
     public void actionPerformed(ActionEvent e) {
         Object a = e.getSource();
         if (a == addTiket.getAdd()) {
-            String harga = addTiket.getHarga().getText();
+            double harga = Double.parseDouble(addTiket.getHarga().getText());
             String tipe = addTiket.getjComboBoxtipe().getSelectedItem().toString();
-            System.out.println(harga+" "+tipe);
+            model.tambahticket(tipe, harga, user);
+            
+            //System.out.println(harga+" "+tipe);
+//            new ControllerListproduct(user);
+            
 
             
 //            try {

@@ -151,14 +151,14 @@ public class HPMenuSeller extends javax.swing.JFrame {
 
     private void jPanelServiceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelServiceMouseClicked
         // TODO add your handling code here:
+        new ControllerAddService(s);
         this.dispose();
-        new ControllerAddService();
     }//GEN-LAST:event_jPanelServiceMouseClicked
 
     private void jPanelItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelItemMouseClicked
-        // TODO add your handling code here:\this.dispose();
+        // TODO add your handling code here:
+        new ControllerAddItem(s);
         this.dispose();
-        new ControllerAddItem();
     }//GEN-LAST:event_jPanelItemMouseClicked
 
     /**
@@ -212,6 +212,7 @@ public class HPMenuSeller extends javax.swing.JFrame {
     
     public void getjTextAreaNamef(String user) {
         aname.append(user);
+        s = user;
     }
     
     

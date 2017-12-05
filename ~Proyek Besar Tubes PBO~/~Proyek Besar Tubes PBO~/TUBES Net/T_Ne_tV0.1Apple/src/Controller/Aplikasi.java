@@ -57,10 +57,13 @@ public class Aplikasi {
         return id;
     }
     
-    
-    public void tambahitem(String nama, String type, double harga, String ids){
+    public void tambahService(String nama, String type, double harga, String ids){
+        Services services  = new Services(nama,type,harga);
+        db.saveservice(services,ids);
+    }
+    public void tambahitem(String nama, String type, double harga, String idi){
         Item i = new Item(nama,type,harga);
-        db.saveitem(i, ids);
+        db.saveitem(i, idi);
     }
     
     public void tambahticket(String type, double harga, String idbrand){
@@ -92,4 +95,5 @@ public class Aplikasi {
     
     
 //   	public void deleteSeller()   
+
 }
