@@ -82,8 +82,6 @@ public class Aplikasi {
     }
     
     public void DeleteItem(String namaItem, String idSeller){
-        System.out.println(namaItem);
-        System.out.println(db.cekPemilik(idSeller, namaItem));
         if (db.cekPemilik(idSeller, namaItem)!=null) {
             db.DeleteItem(namaItem);
         }else{
@@ -92,8 +90,23 @@ public class Aplikasi {
         
     }
     
+    public void DeleteService(String namaItem, String idowner){
+        if (db.cekowner(idowner, namaItem)!=null) {
+            db.DeleteService(namaItem);
+        }else{
+            System.out.println("not match");
+        }
+        
+    }
     
-    
+    public void DeleteTicket(String type, String idowner){
+        if (db.cekBrand(idowner, type)!=null) {
+            db.DeleteService(type);
+        }else{
+            System.out.println("not match");
+        }
+        
+    }
 //   	public void deleteSeller()   
 
 }

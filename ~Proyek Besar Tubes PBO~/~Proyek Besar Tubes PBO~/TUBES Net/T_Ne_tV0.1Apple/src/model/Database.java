@@ -226,6 +226,22 @@ public class Database {
         return st;
     }
     
+    public String cekBrand(String pemilik, String type){
+        String st = null;
+        try {
+            String query = "select * from ticket where idbrand='"+ pemilik + "' AND type_ticket='"+type+"'";
+            ResultSet rs = statement.executeQuery(query);
+            if (rs.next()) {
+                st = rs.getString(1);                
+            }
+            return st;
+        } catch (Exception e) {
+           JOptionPane.showConfirmDialog(null, "error get status", "Error get status", JOptionPane.WARNING_MESSAGE);
+
+        }
+        return st;
+    }
+    
     public String cekowner(String pemilik, String Item){
         String st = null;
         try {
@@ -316,11 +332,7 @@ public class Database {
     public ArrayList<Item> loadItemSel(String idseller){
         try {
             ArrayList<Item> dftitem = new ArrayList();
-<<<<<<< HEAD
             String query = "select * from item where idseller='"+idseller+"'";
-=======
-            String query = "SELECT * FROM `item` WHERE idseller ='"+idseller+"'";
->>>>>>> aa7b718f5e2c3870a1b6e94f26aadc6db6e23f79
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()){
                 Item a = new Item(rs.getString(2), rs.getString(3), rs.getDouble(4));
