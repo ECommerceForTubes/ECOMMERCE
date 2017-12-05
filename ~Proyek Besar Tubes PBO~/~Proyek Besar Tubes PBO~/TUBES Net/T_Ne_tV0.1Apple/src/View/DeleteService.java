@@ -5,6 +5,8 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author User
@@ -391,6 +393,8 @@ public class DeleteService extends javax.swing.JFrame {
         return BackService;
      }
 
-
+    public void addlistener(ActionListener a){
+        DeleteService.addActionListener(a);
+    }
 
 }

@@ -15,6 +15,8 @@ import model.*;
  */
 public class Aplikasi {
     Database db;
+    Seller sesSeller;
+    Customer sesCust;
     ArrayList<Customer> tabCus = new ArrayList();
     ArrayList<Seller> tabSell = new ArrayList<>();
 
@@ -22,6 +24,13 @@ public class Aplikasi {
         db = new Database();
         db.connect();
         
+    }
+    
+    public void setSesionSeller(Seller ses){
+        this.sesSeller = ses;
+    }
+    public Seller getSessionS(){
+        return sesSeller;
     }
     
     public void tambahcust(String nama, String pass, String addrs, String email){
@@ -40,8 +49,12 @@ public class Aplikasi {
     }
 
     public String cekLogin(String username, String password, String Status) {
-        
-        return db.getlogin(username, password, Status);
+        String id=db.getlogin(username, password, Status);
+        if (id!=null) {
+            Seller sl=db.getSeller(id);
+            setSesionSeller(sl);
+        }
+        return id;
     }
     
     public void tambahService(String nama, String type, double harga, String ids){
@@ -58,15 +71,45 @@ public class Aplikasi {
         db.savetiket(t, idbrand);
     }
     
+    public void DeleteUser(String id){
+        if(id.charAt(3)=='c'){
+            db.Deleteuser(id, "customer");
+        }else if(id.charAt(3)=='s'){
+            db.Deleteuser(id, "seller");
+        }else if(id.charAt(3)=='b'){
+            db.Deleteuser(id, "brand");
+        }
+    }
+    
     public void DeleteItem(String namaItem, String idSeller){
         if (db.cekPemilik(idSeller, namaItem)!=null) {
             db.DeleteItem(namaItem);
+        }else{
+            System.out.println("not match");
         }
         
     }
     
+    public void DeleteService(String namaItem, String idowner){
+        if (db.cekowner(idowner, namaItem)!=null) {
+            db.DeleteService(namaItem);
+        }else{
+            System.out.println("not match");
+        }
+        
+    }
     
-    
+    public void DeleteTicket(String type, String idowner){
+        if (db.cekBrand(idowner, type)!=null) {
+            db.DeleteService(type);
+        }else{
+            System.out.println("not match");
+        }
+        
+    }
+    public void Clear(){
+        db.ClearALL();
+    }
 //   	public void deleteSeller()   
 
 }

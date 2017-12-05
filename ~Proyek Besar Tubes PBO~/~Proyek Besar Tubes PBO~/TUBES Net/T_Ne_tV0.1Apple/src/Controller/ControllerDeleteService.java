@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import View.DeleteProduct;
+import View.DeleteService;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -14,16 +14,16 @@ import model.Seller;
  *
  * @author X105
  */
-public class ControllerDeleteProduct implements ActionListener {
+public class ControllerDeleteService implements ActionListener {
     
-    DeleteProduct dlt;
+    DeleteService dlt;
     Aplikasi modl;
     String user;
-    public ControllerDeleteProduct(String user){
-        dlt = new DeleteProduct();
+    public ControllerDeleteService(String user){
+        dlt = new DeleteService();
         modl = new Aplikasi();
         dlt.setVisible(true);
-        this.user=user;//<<<<BEGINI
+        this.user=user;
         dlt.setLocationRelativeTo(null);
         dlt.addlistener(this);
     }
@@ -32,13 +32,10 @@ public class ControllerDeleteProduct implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try{
             Object a = e.getSource();
-//            user= modl.sesSeller;
-            if (a == dlt.getDeleteItem()){
-                String item = dlt.getDelNamaItem().getText();
-//                String ids="ids_"+user.getE_mail();
-                System.out.println(user);
-                modl.DeleteItem(item, user);
-                new ControllerDeleteProduct(user);
+            if (a == dlt.getDeleteService()){
+                String item = dlt.getDelNamaService().getText();
+                modl.DeleteService(item, user);
+                new ControllerDeleteService(user);
                 dlt.setVisible(false);
             }
         }catch(Error x){

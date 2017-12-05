@@ -16,6 +16,7 @@ import View.Beranda;
 public class Driver {
     public static void main(String[] args) {
         //new ControllerLoginCustomer();
+//        new Controller.ControllerDeleteProduct("ids_rff321");
         Beranda beranda = new Beranda();
         beranda.setVisible(true);
         beranda.setLocationRelativeTo(null);
