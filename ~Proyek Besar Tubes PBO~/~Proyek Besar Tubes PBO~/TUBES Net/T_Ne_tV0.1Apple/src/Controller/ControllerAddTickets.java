@@ -37,6 +37,9 @@ public class ControllerAddTickets implements ActionListener{
             double harga = Double.parseDouble(addTiket.getHarga().getText());
             String tipe = addTiket.getjComboBoxtipe().getSelectedItem().toString();
             model.tambahticket(tipe, harga, user);
+            addTiket.setVisible(false);
+            new ControllerListproduct(user);
+            
             
             //System.out.println(harga+" "+tipe);
 //            new ControllerListproduct(user);

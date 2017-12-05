@@ -37,6 +37,9 @@ public class ControllerAddService implements ActionListener{
             String tipe = addService.getTipe().getSelectedItem().toString();
 //            System.out.println(harga+" "+tipe);
             model.tambahService(nama, tipe, harga, user);
+            addService.setVisible(false);
+            new ControllerListproduct(user);
+            
         }
     }    
 }
